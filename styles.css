@@ -246,3 +246,52 @@ nav[aria-label="Primary navigation"] a.active::after{content:"";position:absolut
   .origin-line{font-size:1rem;margin-bottom:26px}
   .origin-line i{width:50px}
 }
+
+
+/* Project-specific research visuals */
+.project-visual{margin:34px 0 34px;padding:26px 28px;border:1px solid var(--line);background:rgba(255,255,255,.4)}
+.project-visual figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:22px;margin-bottom:24px}
+.project-visual figcaption span{font-size:var(--label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.project-visual figcaption b{font-family:var(--serif);font-size:1.15rem;font-weight:500;text-align:right}
+.survey-years{display:grid;grid-template-columns:1fr auto 1fr 56px 1.4fr;align-items:center;gap:14px}
+.survey-years>div{padding:18px;background:var(--soft);text-align:center}
+.survey-years strong{display:block;font-family:var(--serif);font-size:1.65rem;font-weight:500}
+.survey-years small{display:block;margin-top:4px;font-size:.7rem;color:var(--muted)}
+.survey-years>span{font-family:var(--serif);font-size:1.3rem;color:var(--accent)}
+.survey-years>i{height:1px;background:var(--accent);position:relative}
+.survey-years>i::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid var(--accent);border-right:1px solid var(--accent);transform:rotate(45deg)}
+.survey-years .survey-pool{background:var(--ink);color:var(--paper)}
+.survey-years .survey-pool strong{font-size:1.2rem}
+.survey-years .survey-pool small{color:#c8cec9}
+.survey-methods{display:grid;grid-template-columns:repeat(4,1fr);margin-top:16px;border-top:1px solid var(--line)}
+.survey-methods span{padding:10px 8px 0 0;font-size:.7rem;color:var(--muted)}
+
+.category-map{display:grid;grid-template-columns:1.4fr 80px 1fr;gap:22px;align-items:center}
+.state-categories{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.state-categories span,.federal-category{padding:20px;background:var(--soft)}
+.state-categories strong,.federal-category strong{display:block;font-family:var(--serif);font-size:1.8rem;font-weight:500;color:var(--accent)}
+.state-categories small,.federal-category small{display:block;margin-top:4px;font-size:.72rem;color:var(--muted)}
+.merge-mark{display:grid;grid-template-rows:1fr auto 1fr;justify-items:center;height:90px;color:var(--accent)}
+.merge-mark i{width:1px;background:var(--accent)}
+.merge-mark b{font-weight:400;transform:rotate(0deg)}
+.federal-category{background:var(--ink);color:var(--paper)}
+.federal-category strong{color:var(--paper)}
+.federal-category small{color:#c8cec9}
+.visual-note{margin:18px 0 0!important;font-size:.78rem;line-height:1.5;color:var(--muted);max-width:72ch!important}
+
+@media(max-width:760px){
+ .project-visual{margin:26px 0;padding:20px}
+ .project-visual figcaption{display:block;margin-bottom:18px}
+ .project-visual figcaption span{display:block;font-size:.66rem;margin-bottom:5px}
+ .project-visual figcaption b{display:block;font-size:1rem;text-align:left}
+ .survey-years{grid-template-columns:1fr auto 1fr;gap:9px}
+ .survey-years>i{grid-column:1 / -1;width:1px;height:24px;justify-self:center}
+ .survey-years>i::after{right:-3px;top:auto;bottom:0;transform:rotate(135deg)}
+ .survey-years .survey-pool{grid-column:1 / -1}
+ .survey-methods{grid-template-columns:1fr 1fr;gap:0 12px}
+ .survey-methods span{padding:9px 0;border-bottom:1px solid var(--line)}
+ .category-map{grid-template-columns:1fr}
+ .merge-mark{height:34px;grid-template-rows:1fr;grid-template-columns:1fr auto 1fr;align-items:center}
+ .merge-mark i{height:1px;width:100%}
+ .merge-mark b{transform:rotate(90deg)}
+}
