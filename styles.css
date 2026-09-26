@@ -295,3 +295,62 @@ nav[aria-label="Primary navigation"] a.active::after{content:"";position:absolut
  .merge-mark i{height:1px;width:100%}
  .merge-mark b{transform:rotate(90deg)}
 }
+
+
+/* Mobile component corrections from device QA */
+@media(max-width:760px){
+  /* Page rhythm: avoid a desktop-sized void between intro and content */
+  .pagehead{padding-top:46px;padding-bottom:42px}
+  .pagehead + section{padding-top:42px}
+
+  /* About origin marker: preserve separation and connector */
+  .origin-line{
+    display:grid;
+    grid-template-columns:max-content minmax(34px,1fr) max-content;
+    width:100%;
+    gap:12px;
+    align-items:center;
+    margin:0 0 24px;
+    font-size:.95rem;
+    line-height:1.2
+  }
+  .origin-line span{white-space:nowrap}
+  .origin-line i{width:100%;min-width:34px}
+
+  /* Workflow: vertical sequence is more legible than a squeezed 5-column rail */
+  .workflow-line{
+    display:grid;
+    grid-template-columns:1fr;
+    overflow:visible;
+    margin-top:30px;
+    padding:0 0 0 18px;
+    border-top:0;
+    border-left:1px solid var(--ink)
+  }
+  .workflow-line span{
+    min-width:0;
+    display:grid;
+    grid-template-columns:28px 1fr;
+    align-items:baseline;
+    padding:0 0 18px 14px;
+    font-size:.86rem;
+    line-height:1.25
+  }
+  .workflow-line span:last-child{padding-bottom:0}
+  .workflow-line span::before{top:4px;left:-23px}
+  .workflow-line i{display:inline;margin:0;font-size:.6rem}
+
+  /* Dark information panels should size to content, never appear cropped */
+  .detail{
+    width:100%;
+    min-width:0;
+    height:auto;
+    overflow:visible;
+    padding:22px
+  }
+  .detail p{
+    overflow-wrap:anywhere;
+    padding:12px 0
+  }
+  .workflow-feature{align-items:start}
+}
