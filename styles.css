@@ -354,3 +354,46 @@ nav[aria-label="Primary navigation"] a.active::after{content:"";position:absolut
   }
   .workflow-feature{align-items:start}
 }
+
+
+/* Mobile homepage agenda correction */
+@media(max-width:760px){
+  .agenda-section{padding-top:44px}
+  .agenda-section::before{
+    top:44px;
+    width:30px;
+    height:3px
+  }
+  .agenda-section .section-head{
+    margin-bottom:26px;
+    padding-top:15px
+  }
+  .agenda-section .section-head .eyebrow{
+    margin-bottom:12px
+  }
+  .agenda-section .section-head h2{
+    font-size:clamp(1.72rem,7vw,2rem);
+    line-height:1.08;
+    letter-spacing:-.025em;
+    max-width:17ch;
+    margin-bottom:0
+  }
+  .agenda-grid article{
+    padding:22px 0 24px
+  }
+  .agenda-grid article>span{
+    margin:0 0 12px;
+    font-size:.66rem
+  }
+  .agenda-grid h3{
+    font-size:1.25rem;
+    line-height:1.18;
+    margin:0 0 10px
+  }
+  .agenda-grid p{
+    font-size:.94rem;
+    line-height:1.5;
+    margin:0;
+    max-width:36ch
+  }
+}
