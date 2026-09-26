@@ -77,3 +77,6 @@
  .proof-strip div{padding:11px 0;border-bottom:1px solid var(--line)}
  .proof-strip div:last-child{border-bottom:0}
 }
+
+.pub-title{color:var(--ink);text-decoration:none}
+.pub-title:hover{color:var(--accent)}
