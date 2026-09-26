@@ -48,3 +48,22 @@
   .hero h1{font-size:clamp(2.48rem,11vw,3.05rem);line-height:.955;max-width:12.3ch}
   .hero .lede{margin-top:4px}
 }
+
+/* Evidence-rich project portfolio */
+.project-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.evidence-card{display:flex;flex-direction:column;padding:30px;background:rgba(255,255,255,.45);border:1px solid var(--line)}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.card-top .tag{margin-top:0}
+.status{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:5px 8px;white-space:nowrap;color:var(--muted)}
+.evidence-card>p:not(.tag){color:#46504c}
+.evidence-card dl{margin:18px 0 0;border-top:1px solid var(--line)}
+.evidence-card dl div{display:grid;grid-template-columns:82px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.evidence-card dl div:last-child{border-bottom:0}
+.evidence-card dt{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--accent)}
+.evidence-card dd{margin:0;font-size:.9rem;line-height:1.45}
+.more-link{margin-top:28px}
+@media(max-width:760px){
+ .project-cards{grid-template-columns:1fr}
+ .evidence-card{padding:24px}
+ .evidence-card dl div{grid-template-columns:72px 1fr}
+}
