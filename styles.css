@@ -19,5 +19,40 @@ footer{min-height:100px;display:flex;justify-content:space-between;gap:24px;alig
 @media(max-width:760px){header,main,footer{width:min(calc(100% - 34px),var(--max))}header{padding:14px 0;align-items:flex-start}.brand{padding-top:4px}nav[aria-label="Primary navigation"]{gap:8px 14px;max-width:240px}nav[aria-label="Primary navigation"] a{font-size:.74rem}.hero,.pagehead{padding:50px 0 42px}h1{font-size:2.65rem}h2{font-size:1.8rem}.lede{font-size:1.05rem}.feature,.projectgrid,.aboutgrid,.contact-strip,.about-page .pagehead,.method-evidence article{grid-template-columns:1fr;gap:26px}.about-page .pagehead{display:block}.about-focus{margin-top:28px}.project-cards,.news-preview{grid-template-columns:1fr}.proof-strip{grid-template-columns:1fr}.proof-strip div{border-bottom:1px solid var(--line)}.proof-strip div:last-child{border:0}.decision-artifact{padding:18px}.decision-artifact>div{grid-template-columns:1fr;gap:6px;padding:14px 0}.output-summary{grid-template-columns:1fr 1fr;padding:16px}.output-summary div{border-bottom:1px solid #48615a}.output-summary div:nth-child(2){border-right:0}.output-summary div:nth-last-child(-n+2){border-bottom:0}.pub{grid-template-columns:60px 1fr;gap:14px}.section-index{display:none}.method-evidence article{padding:30px 0}.method-evidence aside{padding:16px}.workflow-line{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--ink);padding-left:14px}.workflow-line span{padding:5px 0 12px 10px}.news-item{grid-template-columns:1fr;gap:10px}.news-meta{display:flex;gap:10px;flex-wrap:wrap}.news-meta time{margin:0}.next-nav{grid-template-columns:1fr}.next-nav>span{font-size:.72rem;color:var(--muted)}.cv-row{grid-template-columns:1fr;gap:4px}.cv-row time{text-align:left}.survey-years{flex-wrap:wrap}.survey-years i{display:none}.category-map{align-items:stretch}.merge-mark{flex:0 0 34px}.state-categories{flex-direction:column}footer{align-items:flex-start;flex-direction:column;justify-content:center;padding:24px 0}}
 @media(max-width:430px){h1{font-size:2.35rem}.origin-journey{font-size:.83rem;gap:5px}.journey-arrow{font-size:.62rem}.category-map{flex-direction:column}.merge-mark{transform:rotate(90deg);align-self:center}.pub{grid-template-columns:1fr}.pub .year{margin:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-/* Hide any stale CV nav link until the downloadable public CV is hosted in the repository. */
-a[href="cv.html"]{display:none}
+
+
+
+/* v23 — public CV and final navigation polish */
+.text-button{border:0;background:transparent;padding:0;color:#b63c2f;font:inherit;font-weight:700;cursor:pointer}
+.text-button:hover{text-decoration:underline}
+.cv-head .pronouns{margin:-12px 0 18px;color:var(--accent);font-weight:700;letter-spacing:.04em}
+.cv-section{padding:42px 0!important}
+.cv-section h2{font-size:1.55rem;margin-bottom:18px}
+.cv-row{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:32px;padding:18px 0;border-top:1px solid var(--line)}
+.cv-row:first-of-type{border-top:0;padding-top:0}
+.cv-row h3{font-family:var(--sans);font-size:1rem;margin:0 0 4px}
+.cv-row p,.cv-entry p{margin:4px 0}
+.cv-row ul{margin:8px 0 0;padding-left:20px}
+.cv-row time{text-align:right;color:var(--muted);font-size:.86rem}
+.cv-entry p{padding:10px 0;border-bottom:1px solid var(--line)}
+.cv-entry p:last-child{border-bottom:0}
+.cv-page main{max-width:980px}
+@media(max-width:760px){
+ nav[aria-label="Primary navigation"]{max-width:270px}
+ .cv-row{grid-template-columns:1fr;gap:4px}
+ .cv-row time{text-align:left;grid-row:1;color:var(--accent);font-size:.75rem;font-weight:700}
+}
+@media print{
+ body{background:#fff;color:#000;font-size:10.5pt;line-height:1.4}
+ header,footer,.skip-link,.cv-head .actions{display:none!important}
+ main{width:100%;max-width:none}
+ main>section{border:0}
+ .cv-head{padding:0 0 18pt!important}
+ .cv-head h1{font-size:24pt;max-width:none}
+ .cv-head .lede{font-size:10.5pt}
+ .cv-section{padding:10pt 0!important;break-inside:avoid}
+ .cv-section h2{font-size:13pt;margin-bottom:6pt}
+ .cv-row{grid-template-columns:1fr 120pt;gap:12pt;padding:6pt 0}
+ .cv-row h3{font-size:10.5pt}
+ a{text-decoration:none}
+}
