@@ -457,3 +457,21 @@ footer{min-height:100px;border-top:1px solid var(--line);display:flex;align-item
  .about-focus .mini-label{margin-bottom:14px}
  .about-focus p:not(.mini-label){font-size:1rem;padding:10px 0}
 }
+
+
+/* v16 — identity and research-focus specificity */
+.about-page .pagehead .pronouns{
+ grid-column:1;
+ margin:-15px 0 22px;
+ font-size:.82rem;
+ font-weight:700;
+ letter-spacing:.06em;
+ color:var(--accent);
+}
+.about-page .pagehead>.about-focus{grid-row:1 / span 4}
+.about-focus p:not(.mini-label){font-size:1rem;line-height:1.28;padding:11px 0}
+
+@media(max-width:760px){
+ .about-page .pagehead .pronouns{margin:-8px 0 20px;font-size:.8rem}
+ .about-focus p:not(.mini-label){font-size:.96rem;line-height:1.28;padding:9px 0}
+}
