@@ -570,3 +570,33 @@ footer{min-height:100px;border-top:1px solid var(--line);display:flex;align-item
  .origin-journey{grid-template-columns:auto 1fr auto 1fr auto 1fr auto;gap:5px}
  .origin-journey span{font-size:.7rem}
 }
+
+
+/* v20 — simple migration sequence; no fragile connector grid */
+.origin-journey{
+ display:flex;
+ align-items:center;
+ justify-content:flex-start;
+ gap:12px;
+ flex-wrap:nowrap;
+ overflow:visible;
+}
+.origin-journey i{display:none}
+.origin-journey span{white-space:nowrap}
+.origin-journey .journey-arrow{
+ font-family:var(--sans);
+ font-size:1rem;
+ line-height:1;
+ color:var(--accent);
+ flex:0 0 auto;
+}
+@media(max-width:760px){
+ .origin-journey{gap:7px}
+ .origin-journey span{font-size:.78rem}
+ .origin-journey .journey-arrow{font-size:.78rem}
+}
+@media(max-width:480px){
+ .origin-journey{gap:5px}
+ .origin-journey span{font-size:.66rem}
+ .origin-journey .journey-arrow{font-size:.7rem}
+}
