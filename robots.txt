@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hthynes.github.io/sitemap.xml
