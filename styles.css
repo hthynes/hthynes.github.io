@@ -390,3 +390,70 @@ footer{min-height:100px;border-top:1px solid var(--line);display:flex;align-item
  .about-focus span{padding:7px 0;font-size:.76rem}
  .about-focus b{font-size:1.2rem;margin-top:18px;max-width:12ch}
 }
+
+
+/* v15 — brighter editorial palette + meaningful About focus */
+:root{
+ --ink:#102c27;
+ --muted:#53635e;
+ --paper:#fffaf0;
+ --accent:#d94f3d;
+ --accent2:#f0a33a;
+ --line:#d8d2c4;
+ --soft:#eef1e6;
+ --white:rgba(255,255,255,.62);
+}
+.lede{color:#344a44}
+.button:hover{background:#17453d}
+
+/* Lift the palette out of the old sepia/rust range */
+.home-page .agenda-section .eyebrow,
+.home-page .agenda-grid article>span,
+.methods-page .pagehead .eyebrow,
+.writing-page .pagehead .eyebrow,
+.research-page .project:nth-of-type(4) .tag{color:#ff826e}
+.home-page .agenda-mark span{color:#ff826e}
+.home-page .agenda-mark i::after,
+.methods-page .method-signal>div::before{background:#ff826e}
+.output-summary strong{color:#ff826e}
+.home-page .agenda-section::before,
+.methods-page .pagehead::after,.writing-page .pagehead::after,
+.methods-page .pagehead::before,.writing-page .pagehead::before{background:#ff826e}
+
+/* About: replace the category stack with an actual statement of research focus */
+.about-focus{
+ background:var(--ink);
+ min-height:0;
+ padding:28px;
+ justify-content:flex-start;
+ border-top:5px solid var(--accent2)
+}
+.about-focus .mini-label{
+ color:#ff826e;
+ margin:0 0 22px;
+ font-family:var(--sans);
+ font-size:.66rem;
+ letter-spacing:.12em
+}
+.about-focus p:not(.mini-label){
+ max-width:none;
+ margin:0;
+ padding:12px 0;
+ border-bottom:1px solid rgba(255,250,240,.22);
+ color:var(--paper);
+ font-family:var(--serif);
+ font-size:1.08rem;
+ line-height:1.2
+}
+.about-focus p:last-child{border-bottom:0}
+.about-focus b{display:none}
+
+/* Give neutral surfaces cleaner contrast without adding decoration */
+.recognition-section{background:var(--soft);box-shadow:0 0 0 100vmax var(--soft);clip-path:inset(0 -100vmax)}
+.textlink{color:#b63c2f}
+
+@media(max-width:760px){
+ .about-focus{min-height:0;padding:22px;margin-top:30px}
+ .about-focus .mini-label{margin-bottom:14px}
+ .about-focus p:not(.mini-label){font-size:1rem;padding:10px 0}
+}
