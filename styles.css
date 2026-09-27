@@ -18,26 +18,194 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{scroll-behavior:auto!important;transition:none!important}}
 
 .print-master-cv{display:none}
-@page{size:letter;margin:.48in .58in}
+@page{size:letter;margin:.55in .62in}
 @media print{
-body.cv-page>header,body.cv-page>main,body.cv-page>footer,.skip-link{display:none!important}
-body.cv-page{background:#fff!important;color:#111!important;margin:0!important}
-.print-master-cv{display:block!important;font-family:Arial,Helvetica,sans-serif;font-size:8.55pt;line-height:1.22;color:#111}
-.print-master-cv *{box-sizing:border-box}
-.print-cv-header{display:block!important;width:auto!important;min-height:0!important;padding:0 0 7pt!important;margin:0!important;border:0!important}
-.print-cv-header h1{font:700 18pt/1 Arial,Helvetica,sans-serif!important;letter-spacing:.01em;margin:0 0 3pt!important;color:#111!important}
-.print-cv-header p{font-size:8.4pt!important;line-height:1.2!important;margin:1.5pt 0!important}
-.print-master-cv section{display:block!important;width:auto!important;max-width:none!important;margin:0!important;padding:5.5pt 0 0!important;border:0!important;break-inside:auto}
-.print-master-cv h2{font:700 9.3pt/1.05 Arial,Helvetica,sans-serif!important;letter-spacing:.02em;margin:0 0 3.5pt!important;padding:0 0 2pt!important;border-bottom:.55pt solid #777!important;color:#111!important;break-after:avoid}
-.print-master-cv h3{font:700 7.8pt/1.1 Arial,Helvetica,sans-serif!important;letter-spacing:.03em;margin:4pt 0 1.5pt!important;color:#111!important;break-after:avoid}
-.print-master-cv p{font-size:8.55pt!important;line-height:1.22!important;margin:1.7pt 0!important;color:#111!important}
-.pcv-entry{display:grid!important;grid-template-columns:minmax(0,1fr) 105pt!important;column-gap:10pt!important;width:100%!important;margin:0!important;padding:2.6pt 0!important;break-inside:avoid;page-break-inside:avoid}
-.pcv-entry>b{grid-column:1!important;grid-row:1!important;font-size:8.55pt!important;line-height:1.18!important}
-.pcv-entry>span{grid-column:2!important;grid-row:1!important;text-align:right!important;font-size:8.2pt!important;line-height:1.18!important}
-.pcv-entry>p,.pcv-entry>ul{grid-column:1/-1!important}
-.print-master-cv ul{font-size:8.35pt!important;line-height:1.2!important;margin:1.5pt 0 1pt!important;padding-left:14pt!important}
-.print-master-cv li{margin:0 0 1.2pt!important;padding:0!important}
-.pcv-lines p{display:grid!important;grid-template-columns:1fr auto!important;gap:10pt!important;margin:1.4pt 0!important;break-inside:avoid}
-.pcv-lines span{text-align:right!important;white-space:nowrap}
-.print-master-cv a{color:#111!important;text-decoration:none!important}
+  body.cv-page>header,
+  body.cv-page>main,
+  body.cv-page>footer,
+  .skip-link{display:none!important}
+
+  html,body.cv-page{
+    background:#fff!important;
+    color:#182f32!important;
+    margin:0!important;
+    padding:0!important;
+  }
+
+  .print-master-cv,
+  .print-master-cv *{
+    box-sizing:border-box;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+  }
+
+  .print-master-cv{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    font-size:9pt!important;
+    line-height:1.32!important;
+    color:#182f32!important;
+    font-weight:400!important;
+  }
+
+  .print-cv-header{
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0 0 8pt!important;
+    padding:0 0 8pt!important;
+    border-bottom:1.2pt solid #d9784a!important;
+  }
+
+  .print-cv-header h1{
+    margin:0 0 3pt!important;
+    color:#183b3e!important;
+    font-size:19pt!important;
+    font-weight:750!important;
+    line-height:1!important;
+    letter-spacing:-.015em!important;
+  }
+
+  .print-cv-header p{
+    margin:1.5pt 0!important;
+    color:#465452!important;
+    font-size:8.6pt!important;
+    font-weight:400!important;
+    line-height:1.25!important;
+  }
+
+  .print-master-cv section{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:7pt 0 0!important;
+    border:0!important;
+    break-inside:auto!important;
+  }
+
+  .print-master-cv h2{
+    margin:0 0 4pt!important;
+    padding:0 0 2.5pt!important;
+    border-bottom:.65pt solid #b9b3aa!important;
+    color:#183b3e!important;
+    font-size:9.4pt!important;
+    font-weight:750!important;
+    line-height:1.08!important;
+    letter-spacing:.055em!important;
+    text-transform:uppercase!important;
+    break-after:avoid!important;
+    page-break-after:avoid!important;
+  }
+
+  .print-master-cv h3{
+    margin:5pt 0 2pt!important;
+    padding:0!important;
+    color:#b75f37!important;
+    font-size:7.8pt!important;
+    font-weight:750!important;
+    line-height:1.1!important;
+    letter-spacing:.055em!important;
+    text-transform:uppercase!important;
+    break-after:avoid!important;
+    page-break-after:avoid!important;
+  }
+
+  .print-master-cv p{
+    margin:2pt 0!important;
+    color:#182f32!important;
+    font-size:9pt!important;
+    font-weight:400!important;
+    line-height:1.32!important;
+  }
+
+  .pcv-entry{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) 102pt!important;
+    column-gap:12pt!important;
+    width:100%!important;
+    margin:0!important;
+    padding:3.5pt 0!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  .pcv-entry>b{
+    grid-column:1!important;
+    grid-row:1!important;
+    margin:0!important;
+    color:#183b3e!important;
+    font-size:9pt!important;
+    font-weight:700!important;
+    line-height:1.22!important;
+  }
+
+  .pcv-entry>span{
+    grid-column:2!important;
+    grid-row:1!important;
+    align-self:start!important;
+    margin:0!important;
+    color:#6b625c!important;
+    font-size:8.25pt!important;
+    font-weight:600!important;
+    line-height:1.22!important;
+    text-align:right!important;
+    white-space:normal!important;
+  }
+
+  .pcv-entry>p,
+  .pcv-entry>ul{
+    grid-column:1/-1!important;
+  }
+
+  .pcv-entry>p{
+    margin:1.5pt 0!important;
+  }
+
+  .print-master-cv i{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-style:italic!important;
+    font-weight:400!important;
+  }
+
+  .print-master-cv b{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-weight:700!important;
+  }
+
+  .print-master-cv ul{
+    margin:2pt 0 1pt!important;
+    padding:0 0 0 14pt!important;
+    color:#182f32!important;
+    font-size:8.8pt!important;
+    font-weight:400!important;
+    line-height:1.29!important;
+  }
+
+  .print-master-cv li{
+    margin:0 0 1.5pt!important;
+    padding:0!important;
+  }
+
+  .pcv-lines p{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    gap:12pt!important;
+    margin:2pt 0!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  .pcv-lines span{
+    color:#6b625c!important;
+    font-size:8.25pt!important;
+    font-weight:600!important;
+    text-align:right!important;
+    white-space:nowrap!important;
+  }
+
+  .print-master-cv a{
+    color:#182f32!important;
+    text-decoration:none!important;
+  }
 }
