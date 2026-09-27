@@ -423,3 +423,96 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .home-introduction{padding:38px 0 36px}
   .home-introduction>h1{font-size:clamp(2.15rem,8vw,3rem)}
 }
+
+/* release15: scrolling research homepage */
+.home-page>section{border-bottom:1px solid var(--line)}
+.home-opening{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end;padding:62px 0 58px}
+.opening-copy{max-width:900px}
+.opening-copy>.eyebrow{margin:0 0 16px}
+.opening-copy h1{max-width:19ch;margin:0 0 22px;font-size:clamp(3rem,4.7vw,4.5rem);line-height:.98;letter-spacing:-.05em}
+.opening-copy>.lede{max-width:700px;margin:0;font-size:1.05rem;line-height:1.6}
+.opening-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding-bottom:3px;white-space:nowrap}
+
+.home-agenda,.home-portfolio,.home-writing,.home-about,.home-recognition{padding:54px 0 58px}
+.home-section-label{display:flex;align-items:baseline;gap:12px;margin-bottom:32px}
+.home-section-label span{font-size:.72rem;font-weight:850;color:var(--accent-text);letter-spacing:.08em}
+.home-section-label p{margin:0;font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-text)}
+
+.home-agenda{display:grid;grid-template-columns:210px minmax(0,1fr);gap:42px}
+.home-agenda>.home-section-label{display:block;margin:4px 0 0}
+.home-agenda>.home-section-label span,.home-agenda>.home-section-label p{display:inline}
+.home-agenda>.home-section-label p{margin-left:8px}
+.agenda-body h2{font-size:clamp(2rem,3vw,2.8rem);margin:0 0 26px}
+.agenda-list{border-top:2px solid var(--ink)}
+.agenda-list p{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;margin:0;padding:17px 0;border-bottom:1px solid var(--line);font-size:1.03rem;font-weight:650;line-height:1.42}
+.agenda-list p span{font-size:.68rem;color:var(--accent-text);padding-top:4px}
+
+.portfolio-lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}
+.portfolio-lead h2{margin:0;font-size:clamp(2.2rem,3.3vw,3.15rem)}
+.portfolio-lead p{margin:0;color:var(--muted);line-height:1.55}
+.portfolio-item{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;padding:30px 0;border-top:1px solid var(--line)}
+.portfolio-featured{border-top:3px solid var(--ink);padding-top:32px}
+.portfolio-number{font-size:.72rem;font-weight:850;color:var(--accent-text);padding-top:5px}
+.portfolio-copy{max-width:850px}
+.portfolio-meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:9px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.portfolio-copy h3{font-size:clamp(1.55rem,2.4vw,2.15rem);margin:0 0 8px}
+.portfolio-question{font-size:1.02rem;font-weight:650;color:var(--ink);margin:0 0 13px}
+.portfolio-copy>p:not(.portfolio-question){max-width:72ch;color:var(--muted);font-size:.92rem;line-height:1.58}
+.method-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0 14px}
+.method-tags span{border:1px solid var(--line);padding:5px 8px;font-size:.68rem;font-weight:700;color:var(--ink)}
+.portfolio-pair{display:grid;grid-template-columns:1fr 1fr;gap:44px;border-top:1px solid var(--line)}
+.portfolio-pair .portfolio-item{border-top:0;padding-top:30px}
+.portfolio-pair .portfolio-copy h3{font-size:1.5rem}
+
+.writing-feature{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;padding:0 0 28px}
+.writing-feature .tag{margin-bottom:9px}
+.writing-feature h2{margin:0 0 7px;font-size:clamp(2rem,3vw,2.8rem)}
+.writing-feature p:not(.tag){margin:0;color:var(--muted)}
+.writing-secondary{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.writing-secondary p{display:flex;flex-direction:column;gap:4px;margin:0;padding:18px 0}
+.writing-secondary p+p{border-left:1px solid var(--line);padding-left:28px}
+.writing-secondary span{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-text);font-weight:800}
+.writing-secondary b{font-size:.92rem}
+
+.about-preview{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,.85fr);gap:72px;align-items:start}
+.about-preview h2{font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;margin:0;max-width:18ch}
+.about-preview>div{padding-top:4px}
+.about-preview>div p{margin:0 0 14px;color:var(--muted);line-height:1.62}
+.about-preview .textlink{display:inline-block;margin-top:5px}
+
+.recognition-row{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.recognition-row div{padding:18px 14px 20px 0;min-height:100px}
+.recognition-row div+div{border-left:1px solid var(--line);padding-left:14px}
+.recognition-row b,.recognition-row span{display:block}
+.recognition-row b{font-size:.88rem;line-height:1.35}
+.recognition-row span{margin-top:7px;font-size:.7rem;color:var(--muted);line-height:1.35}
+.recognition-more{display:inline-block;margin-top:18px}
+.home-contact{border-bottom:0!important}
+
+@media(max-width:900px){
+ .home-opening{grid-template-columns:1fr;padding:44px 0 40px;gap:22px}
+ .opening-copy h1{font-size:clamp(2.45rem,8vw,3.5rem)}
+ .opening-links{flex-direction:row;gap:22px}
+ .home-agenda{grid-template-columns:1fr;gap:18px}
+ .home-agenda>.home-section-label{margin:0}
+ .portfolio-lead{grid-template-columns:1fr;gap:14px}
+ .portfolio-pair{grid-template-columns:1fr;gap:0}
+ .portfolio-pair .portfolio-item+.portfolio-item{border-top:1px solid var(--line)}
+ .writing-feature{grid-template-columns:1fr;gap:18px}
+ .about-preview{grid-template-columns:1fr;gap:24px}
+ .about-preview h2{max-width:22ch}
+ .recognition-row{grid-template-columns:1fr 1fr}
+ .recognition-row div{border-bottom:1px solid var(--line)}
+ .recognition-row div+div{border-left:0;padding-left:0}
+ .recognition-row div:nth-child(even){border-left:1px solid var(--line);padding-left:14px}
+}
+@media(max-width:600px){
+ .home-agenda,.home-portfolio,.home-writing,.home-about,.home-recognition{padding:40px 0 44px}
+ .home-section-label{margin-bottom:24px}
+ .portfolio-item{grid-template-columns:34px minmax(0,1fr);gap:8px}
+ .portfolio-pair{display:block}
+ .writing-secondary{grid-template-columns:1fr}
+ .writing-secondary p+p{border-left:0;border-top:1px solid var(--line);padding-left:0}
+ .recognition-row{grid-template-columns:1fr}
+ .recognition-row div,.recognition-row div:nth-child(even){min-height:0;border-left:0;padding:14px 0}
+}
