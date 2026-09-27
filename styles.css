@@ -389,3 +389,37 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
  .home-statement p{font-size:clamp(1.35rem,5.5vw,1.8rem)}
  .home-hero>.actions{margin-top:24px}
 }
+
+/* release14: no-hero homepage */
+.home-introduction{
+  max-width:850px;
+  padding:54px 0 48px;
+}
+.home-introduction>.eyebrow{margin:0 0 13px}
+.home-introduction>h1{
+  max-width:20ch;
+  margin:0 0 22px;
+  font-size:clamp(2.45rem,3.65vw,3.55rem);
+  line-height:1.04;
+  letter-spacing:-.04em;
+}
+.home-introduction>.lede{
+  max-width:650px;
+  margin:0;
+  font-size:1.05rem;
+  line-height:1.58;
+}
+.home-introduction>.actions{
+  margin-top:20px;
+  gap:24px;
+}
+@media(min-width:901px){
+  .home-feature{
+    padding-top:44px;
+    padding-bottom:52px;
+  }
+}
+@media(max-width:900px){
+  .home-introduction{padding:38px 0 36px}
+  .home-introduction>h1{font-size:clamp(2.15rem,8vw,3rem)}
+}
