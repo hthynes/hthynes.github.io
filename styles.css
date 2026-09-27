@@ -279,3 +279,32 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .about-story .detail p:last-child{margin-bottom:0}
   .origin-journey{margin-bottom:24px;font-size:.9rem}
 }
+
+/* release11: restore a coherent homepage hero */
+@media(min-width:901px){
+  .home-hero{
+    display:block;
+    min-height:0;
+    max-width:940px;
+    padding:62px 0 54px;
+  }
+  .home-hero>.eyebrow{margin:0 0 16px}
+  .home-hero>h1{
+    max-width:15.5ch;
+    font-size:clamp(3.35rem,4.15vw,4.05rem);
+    line-height:1.01;
+    margin:0 0 24px;
+  }
+  .home-hero>.lede{
+    max-width:650px;
+    font-size:1.08rem;
+    line-height:1.58;
+    margin:0;
+    padding:0;
+  }
+  .home-hero>.actions{
+    margin-top:26px;
+    padding:0;
+    border:0;
+  }
+}
