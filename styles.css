@@ -27,7 +27,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
 
   html,body.cv-page{
     background:#fff!important;
-    color:#182f32!important;
+    color:#000!important;
     margin:0!important;
     padding:0!important;
   }
@@ -44,7 +44,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
     max-width:none!important;
     font-size:9pt!important;
     line-height:1.32!important;
-    color:#182f32!important;
+    color:#000!important;
     font-weight:400!important;
   }
 
@@ -54,12 +54,12 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
     min-height:0!important;
     margin:0 0 8pt!important;
     padding:0 0 8pt!important;
-    border-bottom:1.2pt solid #d9784a!important;
+    border-bottom:1.2pt solid #000!important;
   }
 
   .print-cv-header h1{
     margin:0 0 3pt!important;
-    color:#183b3e!important;
+    color:#000!important;
     font-size:19pt!important;
     font-weight:750!important;
     line-height:1!important;
@@ -68,7 +68,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
 
   .print-cv-header p{
     margin:1.5pt 0!important;
-    color:#465452!important;
+    color:#000!important;
     font-size:8.6pt!important;
     font-weight:400!important;
     line-height:1.25!important;
@@ -87,8 +87,8 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .print-master-cv h2{
     margin:0 0 4pt!important;
     padding:0 0 2.5pt!important;
-    border-bottom:.65pt solid #b9b3aa!important;
-    color:#183b3e!important;
+    border-bottom:.65pt solid #000!important;
+    color:#000!important;
     font-size:9.4pt!important;
     font-weight:750!important;
     line-height:1.08!important;
@@ -101,7 +101,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .print-master-cv h3{
     margin:5pt 0 2pt!important;
     padding:0!important;
-    color:#b75f37!important;
+    color:#000!important;
     font-size:7.8pt!important;
     font-weight:750!important;
     line-height:1.1!important;
@@ -113,7 +113,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
 
   .print-master-cv p{
     margin:2pt 0!important;
-    color:#182f32!important;
+    color:#000!important;
     font-size:9pt!important;
     font-weight:400!important;
     line-height:1.32!important;
@@ -134,7 +134,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
     grid-column:1!important;
     grid-row:1!important;
     margin:0!important;
-    color:#183b3e!important;
+    color:#000!important;
     font-size:9pt!important;
     font-weight:700!important;
     line-height:1.22!important;
@@ -145,7 +145,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
     grid-row:1!important;
     align-self:start!important;
     margin:0!important;
-    color:#6b625c!important;
+    color:#000!important;
     font-size:8.25pt!important;
     font-weight:600!important;
     line-height:1.22!important;
@@ -176,7 +176,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .print-master-cv ul{
     margin:2pt 0 1pt!important;
     padding:0 0 0 14pt!important;
-    color:#182f32!important;
+    color:#000!important;
     font-size:8.8pt!important;
     font-weight:400!important;
     line-height:1.29!important;
@@ -197,7 +197,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   }
 
   .pcv-lines span{
-    color:#6b625c!important;
+    color:#000!important;
     font-size:8.25pt!important;
     font-weight:600!important;
     text-align:right!important;
@@ -205,7 +205,7 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   }
 
   .print-master-cv a{
-    color:#182f32!important;
+    color:#000!important;
     text-decoration:none!important;
   }
 }
