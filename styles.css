@@ -362,3 +362,30 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .home-identity>.pronouns{margin:0 0 22px}
   .home-intro>.actions{margin-top:24px}
 }
+
+/* release13: compact editorial homepage masthead */
+.home-hero{max-width:none}
+.home-masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.home-name{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.home-name h1{max-width:none;margin:0;font-size:clamp(2.75rem,4.2vw,4rem);line-height:.95;letter-spacing:-.05em}
+.home-name .pronouns{margin:0;font-size:.78rem}
+.home-role{margin:0 0 3px;color:var(--muted);font-size:.84rem;font-weight:600;text-align:right}
+.home-statement{padding:30px 0 0;max-width:900px}
+.home-statement p{margin:0;font-size:clamp(1.5rem,2.35vw,2.15rem);line-height:1.27;letter-spacing:-.025em;font-weight:650;max-width:29ch}
+.home-hero>.actions{margin-top:26px}
+@media(min-width:901px){
+ .home-hero{display:block;min-height:0;padding:48px 0 46px}
+ .home-hero>.actions{margin-top:26px;padding:0;border:0}
+ .home-feature{padding-top:46px}
+}
+@media(max-width:900px){
+ .home-hero{padding:40px 0}
+ .home-masthead{display:block;padding-bottom:16px}
+ .home-name{display:block}
+ .home-name h1{margin-bottom:6px}
+ .home-name .pronouns{margin:0}
+ .home-role{text-align:left;margin-top:14px}
+ .home-statement{padding-top:24px}
+ .home-statement p{font-size:clamp(1.35rem,5.5vw,1.8rem)}
+ .home-hero>.actions{margin-top:24px}
+}
