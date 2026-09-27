@@ -209,3 +209,16 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
     text-decoration:none!important;
   }
 }
+/* About hero: simple identity-first composition */
+.about-page .pagehead{display:block;max-width:900px;padding:54px 0 48px}
+.about-page .pagehead>.eyebrow{margin:0 0 11px}
+.about-name{margin:0 0 22px}
+.about-name h1{margin:0 0 6px}
+.pronouns{margin:0;font-size:.82rem;font-weight:760;color:var(--accent-text)}
+.about-page .pagehead>.lede{max-width:760px;margin:0}
+@media(max-width:760px){
+  .about-page .pagehead{padding:36px 0}
+  .about-page .pagehead>.eyebrow{margin-bottom:9px}
+  .about-name{margin-bottom:18px}
+  .about-page .pagehead>.lede{margin:0}
+}
