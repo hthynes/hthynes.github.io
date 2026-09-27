@@ -216,3 +216,31 @@ footer{border-top:1px solid rgba(23,56,60,.25)}
  .project:nth-of-type(even){box-shadow:0 0 0 100vmax rgba(255,255,255,.18)}
  .about-focus{margin-top:28px}
 }
+
+/* v29 — mobile density correction */
+@media(max-width:760px){
+ main>section,.project{padding-top:42px;padding-bottom:42px}
+ .hero,.pagehead{padding-top:48px;padding-bottom:46px}
+ .section-head{margin-bottom:24px}
+ .feature{gap:30px}
+ .research-note{padding-top:10px}
+ .research-note:before{margin-bottom:15px}
+ .project-cards{margin-top:4px}
+ .evidence-card{padding:18px 0}
+ .more-link{margin-top:18px}
+ .home-news{padding-top:44px!important;padding-bottom:44px!important}
+ .news-preview{gap:0}
+ .news-preview article{padding:18px 0}
+ .news-preview article h3{font-size:1.1rem}
+ .news-preview article p{margin-bottom:4px}
+ .contact-strip{gap:24px}
+ .next-nav{padding:34px 0}
+ .decision-artifact{margin:24px 0 10px}
+ .decision-artifact>div{padding:11px 0}
+ .study-at-glance{margin-top:24px}
+ .boundary{margin-top:22px}
+ .writing-section{padding-top:46px!important;padding-bottom:46px!important}
+ .news-list{padding-top:0!important}
+ .news-item{padding:27px 0}
+ .recognition-section{padding-top:46px!important;padding-bottom:46px!important}
+}
