@@ -222,3 +222,60 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
   .about-name{margin-bottom:18px}
   .about-page .pagehead>.lede{margin:0}
 }
+
+/* release10: desktop composition pass */
+@media(min-width:901px){
+  header,main,footer{width:min(calc(100% - 64px),1080px)}
+
+  .home-hero{
+    position:relative;
+    max-width:none;
+    min-height:500px;
+    padding:66px 0 58px;
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(250px,.65fr);
+    grid-template-rows:auto auto 1fr;
+    column-gap:76px;
+    align-content:start;
+  }
+  .home-hero>.eyebrow{grid-column:1;grid-row:1;margin-bottom:16px}
+  .home-hero>h1{grid-column:1;grid-row:2;max-width:12.5ch;font-size:clamp(3.25rem,4.25vw,4.15rem);line-height:.99;margin-bottom:0}
+  .home-hero>.lede{grid-column:2;grid-row:2;align-self:end;max-width:31ch;font-size:1.05rem;line-height:1.58;margin:0 0 2px;padding-top:10px}
+  .home-hero>.actions{grid-column:1/-1;grid-row:3;align-self:end;margin-top:42px;padding-top:24px;border-top:1px solid var(--line)}
+
+  .home-feature{
+    padding-top:52px;
+    padding-bottom:54px;
+  }
+  .home-feature>div{max-width:900px}
+  .home-feature>div>h2{font-size:clamp(2rem,2.7vw,2.6rem);max-width:24ch}
+  .home-feature .lede.small{max-width:66ch}
+
+  .about-page .pagehead{
+    max-width:820px;
+    padding:54px 0 52px;
+  }
+  .about-page .pagehead>.lede{max-width:700px;font-size:1.1rem}
+
+  .aboutgrid.about-story{
+    grid-template-columns:minmax(0,1.7fr) minmax(230px,.55fr);
+    gap:72px;
+    padding-top:50px;
+    padding-bottom:56px;
+    align-items:start;
+  }
+  .about-story>div>p{max-width:64ch}
+  .about-story>div>p:first-of-type{font-size:1rem;font-weight:500;line-height:1.6}
+  .about-story .detail{
+    position:sticky;
+    top:28px;
+    border-top:0;
+    border-left:3px solid var(--accent);
+    padding:2px 0 2px 20px;
+    font-size:.84rem;
+    line-height:1.52;
+  }
+  .about-story .detail p{margin:0 0 20px}
+  .about-story .detail p:last-child{margin-bottom:0}
+  .origin-journey{margin-bottom:24px;font-size:.9rem}
+}
