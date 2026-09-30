@@ -1269,3 +1269,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .hero-visual{min-height:560px;padding-left:42px;padding-right:112px}
  .home-portrait{width:min(100%,470px)}
 }
+
+/* release37 — repair About portrait rendering */
+.about-headshot img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;object-position:center;background:transparent}
+@media(max-width:600px){.about-headshot{width:min(88vw,340px);margin-inline:auto}.about-headshot img{aspect-ratio:auto}}
