@@ -1367,3 +1367,6 @@ body.writing-page .writing-head::before,body.writing-page .writing-head::after{d
  .home-page .workbench>a{min-height:220px}
  .home-page .trajectory-intro{margin-bottom:20px}
 }
+
+body.writing-page .writing-route>span:not(:last-child)::after{display:none!important;content:none!important}
+.writing-route .route-number{display:block;margin-bottom:5px;color:var(--accent-dark);font-size:.62rem;font-style:normal;font-weight:800;letter-spacing:.12em}
