@@ -1403,3 +1403,18 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .about-page .about-pagehead .about-headshot{width:min(78vw,300px);justify-self:start;margin-left:14px}
  .about-page .about-pagehead .about-headshot img{aspect-ratio:4/5;object-fit:cover}
 }
+
+/* release45 — harden portrait line rendering and tablet hero composition */
+.portrait-orbit{display:block;position:absolute;z-index:1;pointer-events:none;overflow:visible;left:-58px;top:-44px;width:calc(100% + 108px);height:calc(100% + 82px)}
+.portrait-orbit path{fill:none!important;stroke:#d95f32!important}
+@media(min-width:801px) and (max-width:1279px){
+ .hero-composition{grid-template-columns:minmax(420px,.9fr) minmax(500px,1.1fr);gap:24px}
+ .hero-copy h1{font-size:clamp(4rem,6vw,5.35rem);max-width:9ch}
+ .hero-visual{min-height:570px;padding:32px 122px 38px 30px}
+ .home-portrait{width:min(100%,430px);margin-left:0}
+ .hero-interests{right:0;bottom:78px;width:154px}
+ .portrait-orbit{left:-46px;top:-36px;width:calc(100% + 88px);height:calc(100% + 68px)}
+}
+@media(max-width:800px){
+ .portrait-orbit{left:-26px;top:-24px;width:calc(100% + 48px);height:calc(100% + 44px)}
+}
