@@ -1078,3 +1078,60 @@ body.notebook-site{background:var(--paper)}
  .research-lens b{font-size:.66rem;margin-bottom:5px}
  .research-lens span{font-size:.82rem;line-height:1.48}
 }
+
+/* release29 — repair research-page mobile top */
+@media(max-width:760px){
+ .research-page header{
+   padding-top:18px;
+   padding-bottom:0;
+   gap:16px;
+ }
+ .research-page .brand{
+   margin:0;
+   line-height:1.1;
+ }
+ .research-page header nav[aria-label="Primary navigation"]{
+   width:100%;
+   margin:0;
+   padding:0 0 10px;
+   gap:24px;
+   border-bottom:1px solid var(--line);
+ }
+ .research-page header nav[aria-label="Primary navigation"] a{
+   padding:10px 0 9px;
+   font-size:.78rem;
+ }
+ .research-page .research-jump{
+   position:sticky;
+   top:0;
+   z-index:30;
+   width:100vw;
+   margin-left:calc(50% - 50vw);
+   margin-right:calc(50% - 50vw);
+   padding:7px 16px;
+   gap:7px;
+   border-bottom:1px solid var(--line);
+   background:rgba(245,237,223,.98);
+   overflow-x:auto;
+   scroll-padding-inline:16px;
+ }
+ .research-page .research-jump a{
+   flex:0 0 auto;
+   min-height:38px;
+   padding:8px 12px;
+   border-radius:999px;
+   font-size:.68rem;
+   background:transparent;
+   color:var(--muted);
+ }
+ .research-page .research-jump a.active{
+   background:var(--ink);
+   color:var(--paper);
+ }
+ .research-page .research-jump a:first-of-type{
+   margin-left:0;
+ }
+ .research-page .pagehead{
+   padding-top:42px!important;
+ }
+}
