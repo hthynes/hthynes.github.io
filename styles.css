@@ -1274,7 +1274,7 @@ body.writing-page .writing-head::before,body.writing-page .writing-head::after{d
 /* Portrait composition */
 .home-page .hero-visual{position:relative;display:grid;grid-template-columns:minmax(0,340px) minmax(145px,1fr);gap:42px;align-items:center;justify-content:end;padding:18px 0 0;min-height:0}
 .home-page .home-portrait{width:100%;max-width:340px;margin:0;position:relative;z-index:2}
-.home-page .home-portrait::after{content:"";position:absolute;right:-46px;bottom:62px;width:54px;height:66px;z-index:1;background-color:#c7a15c;background-image:radial-gradient(rgba(255,249,237,.58) .34px,transparent .75px),linear-gradient(145deg,rgba(210,178,112,.86),rgba(157,112,56,.82));background-size:4px 4px,100% 100%;background-blend-mode:screen,normal;opacity:.72}
+.home-page .home-portrait::after{content:"";position:absolute;right:-46px;bottom:62px;width:62px;height:72px;z-index:1;background-color:#b88d59;background-image:radial-gradient(rgba(255,249,237,.4) .3px,transparent .72px),linear-gradient(145deg,rgba(196,164,113,.72),rgba(128,93,65,.58));background-size:4px 4px,100% 100%;background-blend-mode:soft-light,normal;opacity:.58;clip-path:polygon(1% 0,100% 1%,99% 99%,0 100%,1% 57%)}
 .home-page .portrait-mat{position:relative;padding:0!important;margin:0!important;background:transparent;border:0!important;box-shadow:none}
 .home-page .portrait-mat::before{content:none}
 .home-page .portrait-mat::after{content:none}
