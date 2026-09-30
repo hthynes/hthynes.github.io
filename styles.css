@@ -1190,14 +1190,14 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 }
 
 /* Writing page */
-.writing-head{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:34px 64px;align-items:center}
-.writing-head-copy h1{max-width:11ch;margin-bottom:20px}
+.writing-head{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:start}\n.writing-head::after{display:none!important;content:none!important}\n.writing-head-copy{max-width:900px}
+.writing-head-copy h1{max-width:none;font-size:clamp(3rem,5vw,4.8rem);line-height:.98;margin-bottom:18px}
 .writing-head-copy .eyebrow{margin-bottom:12px}
 .writing-head-copy .lede{margin:0;max-width:620px}
-.writing-mark{justify-self:end;width:132px;height:96px;border:0;border-bottom:2px solid var(--ink);display:grid;place-items:center;position:relative}
+.writing-mark{display:none!important}
 .writing-mark::after{content:"";position:absolute;width:64px;height:12px;right:0;bottom:-3px;border-top:2px solid var(--accent);border-radius:50%;transform:rotate(-8deg)}
 .writing-mark span{font-family:var(--serif);font-size:4rem;font-weight:500;font-style:italic;line-height:1;color:var(--accent-dark)}
-.writing-route{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-top:2px}
+.writing-route{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);max-width:none;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-top:2px}
 .writing-route>span{position:relative;padding:14px 18px 15px 0}
 .writing-route>span+span{border-left:1px solid var(--line);padding-left:18px}
 .writing-route>span:not(:last-child)::after{content:"→";position:absolute;right:-7px;top:13px;background:var(--paper);padding:0 3px;color:var(--accent-dark)}
@@ -1206,7 +1206,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 .writing-route small{font-size:.68rem;color:var(--muted);margin-top:3px}
 .writing-section{padding-top:52px!important;padding-bottom:54px!important}
 .writing-section>h2{font-size:clamp(2rem,3vw,2.8rem);margin-bottom:12px}
-.writing-page .published-section{background:rgba(227,232,215,.46);box-shadow:0 0 0 100vmax rgba(227,232,215,.46);clip-path:inset(0 -100vmax)}
+.writing-page .published-section{padding-top:38px!important;background:rgba(227,232,215,.46);box-shadow:0 0 0 100vmax rgba(227,232,215,.46);clip-path:inset(0 -100vmax)}
 @media(max-width:760px){
  .writing-head{grid-template-columns:1fr;gap:20px}
  .writing-mark{display:none}
@@ -1281,7 +1281,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 .home-page .hero-interests p{font-size:.76rem;line-height:1.55;color:var(--muted);margin:8px 0 0}
 
 /* On wide screens, let the interests complete the portrait composition. */
-@media(min-width:1280px){
+@media(min-width:1100px){
  .home-page .hero-composition{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:38px}
  .home-page .hero-visual{grid-template-columns:minmax(0,350px) minmax(145px,170px);gap:18px;align-items:end;padding:18px 8px 20px 18px}
  .home-page .home-portrait{max-width:350px}
