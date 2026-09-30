@@ -1355,3 +1355,13 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .portrait-orange-shape{right:-20px;bottom:-17px;width:112px;height:80px}
  .hero-interests{background:transparent}
 }
+
+/* release43 — use the organic orange gesture as the line, not a filled shape */
+.portrait-orange-shape{display:none!important}
+.home-portrait::before{content:none!important}
+.portrait-orbit{position:absolute;z-index:1;pointer-events:none;overflow:visible;left:-86px;top:-58px;width:calc(100% + 158px);height:calc(100% + 105px)}
+.portrait-orbit path{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.home-portrait .portrait-mat,.home-portrait figcaption{position:relative;z-index:2}
+@media(max-width:800px){
+ .portrait-orbit{left:-38px;top:-34px;width:calc(100% + 72px);height:calc(100% + 62px)}
+}
