@@ -692,3 +692,68 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
  .program-methods{align-items:flex-start}
  .program-methods>span{width:100%}
 }
+
+
+/* release21: expressive editorial homepage */
+.home-opening-editorial{position:relative;min-height:68vh;align-items:center;overflow:visible}
+.home-opening-editorial::before{content:"";position:absolute;z-index:-1;width:clamp(260px,34vw,470px);height:clamp(260px,34vw,470px);right:-5vw;top:50%;transform:translateY(-50%);border-radius:50%;background:var(--surface-cool);opacity:.82}
+.home-opening-editorial::after{content:"";position:absolute;z-index:-1;width:clamp(90px,12vw,160px);height:clamp(90px,12vw,160px);right:18%;top:13%;border:1px solid var(--accent);border-radius:50%}
+.home-opening-editorial .opening-copy{max-width:980px}
+.home-opening-editorial .opening-copy h1{max-width:17ch;font-size:clamp(3.7rem,6.3vw,6.35rem);line-height:.91;letter-spacing:-.065em}
+.home-opening-editorial h1 em{font-style:italic;font-weight:520;color:var(--accent-dark)}
+.home-opening-editorial h1 strong{font-weight:800}
+.home-opening-editorial .lede{max-width:760px;font-size:1.08rem}
+.home-opening-editorial .opening-links{align-self:end;margin-bottom:8px;padding:16px 18px;background:rgba(243,234,220,.78);backdrop-filter:blur(8px);border-top:2px solid var(--ink)}
+
+.home-program{background:var(--surface-cool);box-shadow:0 0 0 100vmax var(--surface-cool);clip-path:inset(0 -100vmax)}
+.program-path>div{transition:transform .2s ease,background .2s ease;padding-top:22px}
+.program-path>div:hover,.program-path>div:focus-visible{background:rgba(243,234,220,.62);transform:translateY(-5px);outline:none}
+.program-path>div:hover b,.program-path>div:focus-visible b{color:var(--accent-dark)}
+.program-path>div:focus-visible{box-shadow:inset 0 0 0 3px var(--accent-text)}
+.program-path>div:not(:last-child)::after{background:var(--surface-cool)}
+
+.agenda-list p{transition:padding-left .18s ease,background .18s ease}
+.agenda-list p:hover{padding-left:14px;background:linear-gradient(90deg,var(--surface) 0,rgba(234,220,201,0) 78%)}
+.agenda-list p:hover span{color:var(--ink)}
+
+.home-portfolio{position:relative}
+.portfolio-featured{padding:34px 34px 36px;background:var(--ink);color:var(--paper);border-top:0}
+.portfolio-featured .portfolio-number,.portfolio-featured .portfolio-meta,.portfolio-featured .portfolio-copy>p:not(.portfolio-question){color:#d8d2c6}
+.portfolio-featured .portfolio-copy h3,.portfolio-featured .portfolio-question{color:var(--paper)}
+.portfolio-featured .method-tags span{color:var(--paper);border-color:rgba(243,234,220,.35)}
+.portfolio-featured .textlink{color:#f0a37e}
+.portfolio-pair .portfolio-item{transition:transform .18s ease}
+.portfolio-pair .portfolio-item:hover{transform:translateY(-4px)}
+
+.home-writing{background:var(--surface);box-shadow:0 0 0 100vmax var(--surface);clip-path:inset(0 -100vmax)}
+.writing-feature h2{font-size:clamp(2.7rem,5vw,5rem);letter-spacing:-.055em}
+
+.home-about .about-preview h2{position:relative}
+.home-about .about-preview h2::before{content:"“";position:absolute;left:-.5em;top:-.28em;font-size:2.8em;font-weight:400;color:var(--accent);opacity:.35}
+
+.recognition-row div{transition:background .18s ease,transform .18s ease}
+.recognition-row div:hover{background:var(--surface-cool);transform:translateY(-3px)}
+
+.motion-ready .home-page>section{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.motion-ready .home-page>section.in-view{opacity:1;transform:none}
+.motion-ready .home-opening{transition-delay:.02s}
+
+@media(max-width:900px){
+ .home-opening-editorial{min-height:0}
+ .home-opening-editorial::before{right:-28vw;top:36%;opacity:.55}
+ .home-opening-editorial::after{right:5%;top:8%}
+ .home-opening-editorial .opening-copy h1{font-size:clamp(3rem,10.5vw,5rem);max-width:15ch}
+ .home-opening-editorial .opening-links{width:max-content}
+ .portfolio-featured{padding:28px 24px 30px}
+}
+@media(max-width:600px){
+ .home-opening-editorial::before{width:250px;height:250px;right:-120px;top:28%}
+ .home-opening-editorial::after{width:88px;height:88px;right:-18px;top:8%}
+ .home-opening-editorial .opening-copy h1{font-size:clamp(2.85rem,13vw,4.2rem)}
+ .home-opening-editorial .opening-links{padding:12px 14px}
+ .portfolio-featured{margin-inline:-12px;padding:25px 20px 28px}
+ .writing-feature h2{font-size:clamp(2.35rem,11vw,3.6rem)}
+}
+@media(prefers-reduced-motion:reduce){
+ .program-path>div,.agenda-list p,.portfolio-pair .portfolio-item,.recognition-row div{transition:none}
+}
