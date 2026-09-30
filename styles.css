@@ -1261,3 +1261,11 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .hero-interests{position:relative;right:auto;top:auto;transform:none;width:auto;margin:30px 6% 0;padding-left:14px}
  .hero-interests p{font-size:.75rem}
 }
+
+/* release36 — correct photo assets + rebalance hero to approved composition */
+@media(min-width:981px){
+ .hero-composition{grid-template-columns:minmax(0,1fr) minmax(500px,1.08fr);gap:42px}
+ .hero-copy h1{font-size:clamp(3.6rem,5.4vw,5.75rem);max-width:11ch;line-height:.94}
+ .hero-visual{min-height:560px;padding-left:42px;padding-right:112px}
+ .home-portrait{width:min(100%,470px)}
+}
