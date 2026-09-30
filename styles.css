@@ -869,3 +869,41 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
  .journey-strip li,.journey-strip li+li,.journey-strip li:nth-child(3){min-height:0;padding:13px 0;border-left:0;border-bottom:1px solid var(--line)}
  .journey-strip span{margin-bottom:4px}
 }
+
+
+/* release24: polish, interaction, and accessibility QA */
+::selection{background:var(--accent);color:#102f33}
+a,button{-webkit-tap-highlight-color:rgba(143,63,32,.16)}
+@media(hover:hover){
+ nav[aria-label="Primary navigation"] a,.textlink,.pub-title,.news-item h2 a{transition:color .16s ease,border-color .16s ease,text-decoration-color .16s ease}
+ nav[aria-label="Primary navigation"] a:hover{color:var(--accent-dark)}
+ .next-nav>a{transition:transform .18s ease,border-color .18s ease}
+ .next-nav>a:hover{transform:translateY(-3px);border-color:var(--accent)}
+}
+.architecture-controls button{cursor:pointer}
+.architecture-controls button:focus-visible{position:relative;z-index:3}
+.architecture-panel:focus-visible{outline:3px solid var(--accent-text);outline-offset:6px}
+.study-map button,.reporting-arrow,.decision-tabs button{cursor:pointer}
+.study-panel[hidden],.architecture-panel[hidden],.decision-copy[hidden],.reporting-note[hidden]{display:none!important}
+.study-panel:not([hidden]),.architecture-panel:not([hidden]),.decision-copy:not([hidden]),.reporting-note:not([hidden]){animation:content-in .22s ease both}
+@keyframes content-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+.motion-ready body:not(.cv-page) main>section{opacity:0;transform:translateY(18px);transition:opacity .48s ease,transform .48s ease}
+.motion-ready body:not(.cv-page) main>section.in-view{opacity:1;transform:none}
+.motion-ready body:not(.cv-page) main>section:first-child{opacity:1;transform:none}
+
+@media(max-width:760px){
+ nav[aria-label="Primary navigation"]{overflow-x:auto;justify-content:flex-start;gap:18px;scrollbar-width:none;padding-bottom:1px}
+ nav[aria-label="Primary navigation"]::-webkit-scrollbar{display:none}
+ nav[aria-label="Primary navigation"] a{flex:0 0 auto}
+ .writing-route,.program-path,.story-river,.evidence-streams,.journey-strip ol{scroll-margin-top:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .motion-ready body:not(.cv-page) main>section{opacity:1!important;transform:none!important}
+}
+@media(forced-colors:active){
+ .button,.boundary,.detail,.architecture-controls button,.method-tags span,.story-outcomes b,.program-methods>b{border:1px solid CanvasText}
+ a:focus-visible,button:focus-visible,.architecture-panel:focus-visible{outline:3px solid Highlight}
+}
