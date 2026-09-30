@@ -1280,6 +1280,15 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 .home-page .hero-interests b{display:block;white-space:nowrap;font-size:.62rem;text-transform:uppercase;letter-spacing:.12em}
 .home-page .hero-interests p{font-size:.76rem;line-height:1.55;color:var(--muted);margin:8px 0 0}
 
+/* On wide screens, let the interests complete the portrait composition. */
+@media(min-width:1280px){
+ .home-page .hero-composition{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:38px}
+ .home-page .hero-visual{grid-template-columns:minmax(0,350px) minmax(145px,170px);gap:18px;align-items:end;padding:18px 8px 20px 18px}
+ .home-page .home-portrait{max-width:350px}
+ .home-page .hero-interests{margin:0 0 48px 0;padding-left:14px}
+ .home-page .hero-interests b{white-space:normal}
+}
+
 /* Shared homepage section rhythm */
 .home-page .section-intro{grid-template-columns:150px minmax(0,1fr);gap:34px;margin-bottom:30px}
 .home-page .section-intro h2{font-size:clamp(2rem,3.2vw,3.15rem);line-height:1.04;max-width:20ch}
