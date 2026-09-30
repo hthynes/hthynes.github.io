@@ -1365,3 +1365,41 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 @media(max-width:800px){
  .portrait-orbit{left:-38px;top:-34px;width:calc(100% + 72px);height:calc(100% + 62px)}
 }
+
+/* release44 — repair About hero cascade and tablet composition */
+.about-page .about-pagehead{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) minmax(260px,340px);
+ gap:54px;
+ align-items:center;
+ max-width:none;
+ padding:54px 0 58px;
+}
+.about-page .about-pagehead .about-head-copy{min-width:0}
+.about-page .about-pagehead .about-name{margin-bottom:26px}
+.about-page .about-pagehead .about-head-copy .lede{max-width:68ch;margin:0;font-size:1.08rem;line-height:1.62}
+.about-page .about-pagehead .about-headshot{width:100%;max-width:340px;justify-self:end;margin:0}
+.about-page .about-pagehead .about-headshot img{
+ display:block;
+ width:100%;
+ aspect-ratio:4/5;
+ height:auto;
+ object-fit:cover;
+ object-position:center 24%;
+}
+@media (min-width:761px) and (max-width:1000px){
+ .about-page .about-pagehead{
+  grid-template-columns:minmax(0,1fr) minmax(220px,280px);
+  gap:34px;
+  align-items:center;
+  padding:44px 0 50px;
+ }
+ .about-page .about-pagehead .about-name{margin-bottom:20px}
+ .about-page .about-pagehead .about-head-copy .lede{font-size:1rem;line-height:1.56}
+ .about-page .about-pagehead .about-headshot{max-width:280px}
+}
+@media(max-width:760px){
+ .about-page .about-pagehead{display:grid;grid-template-columns:1fr;gap:30px;padding:36px 0 42px}
+ .about-page .about-pagehead .about-headshot{width:min(78vw,300px);justify-self:start;margin-left:14px}
+ .about-page .about-pagehead .about-headshot img{aspect-ratio:4/5;object-fit:cover}
+}
