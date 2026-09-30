@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Taiel Lucile is a sociologist-in-training studying race, disability, education, and the life course."><meta name="author" content="Taiel Lucile"><meta name="theme-color" content="#f5eddf"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml"><title>Taiel Lucile | Sociology of Education</title><link rel="stylesheet" href="styles.css?v=20260930-release25"><link rel="canonical" href="https://taielucile.github.io/"><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Taiel Lucile is a sociologist-in-training studying race, disability, education, and the life course."><meta name="author" content="Taiel Lucile"><meta name="theme-color" content="#f5eddf"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml"><title>Taiel Lucile | Sociology of Education</title><link rel="stylesheet" href="styles.css?v=20260930-release27"><link rel="canonical" href="https://taielucile.github.io/"><style>
 /* release26 — trajectory as intellectual pivot */
 .trajectory-story{display:block!important;padding-top:64px!important;padding-bottom:68px!important}
 .trajectory-intro{display:grid;grid-template-columns:190px minmax(0,760px);gap:44px;align-items:start;margin-bottom:42px}
@@ -76,25 +76,18 @@
 <section class="trajectory-section trajectory-story" aria-labelledby="trajectory-title">
  <div class="trajectory-intro">
   <p class="eyebrow">Intellectual trajectory</p>
-  <h2 id="trajectory-title">I started by learning how to work within a system. I became interested in the system itself.</h2>
+  <h2 id="trajectory-title">From speech-language pathology to sociology</h2>
  </div>
- <div class="trajectory-path" aria-label="From speech-language pathology to sociology">
-  <div class="trajectory-discipline">
-   <small>I entered college planning to study</small>
-   <strong>speech-language<br class="desktop-only"> pathology</strong>
-  </div>
-  <ol class="trajectory-questions">
-   <li><span>01</span><p>Who decides what counts as impairment?</p></li>
-   <li><span>02</span><p>Whose language becomes the norm?</p></li>
-   <li><span>03</span><p>Why are some children more likely to be identified than others?</p></li>
-  </ol>
-  <div class="trajectory-discipline trajectory-destination">
-   <small>Those questions led me to</small>
-   <strong>sociology</strong>
-  </div>
+ <div class="trajectory-steps" role="tablist" aria-label="Research trajectory">
+  <button type="button" role="tab" aria-selected="true" aria-controls="trajectory-panel" data-step="slp"><span>01</span><b>Speech-language pathology</b></button>
+  <button type="button" role="tab" aria-selected="false" aria-controls="trajectory-panel" data-step="questions"><span>02</span><b>Special education questions</b></button>
+  <button type="button" role="tab" aria-selected="false" aria-controls="trajectory-panel" data-step="sociology"><span>03</span><b>Sociology</b></button>
  </div>
- <div class="trajectory-copy">
-  <p>Speech-language pathology first drew my attention to disability, language, and schooling. Over time, I became less interested in treating institutional categories as given and more interested in asking how those categories are made, whose norms they reflect, and what happens to young people once institutions act on them.</p>
+ <div class="trajectory-panel" id="trajectory-panel" role="tabpanel" tabindex="0">
+  <p data-trajectory-copy>I entered college planning to become a school-based speech-language pathologist. I wanted to work with Black and Latino children from low-resource communities.</p>
+ </div>
+ <div class="trajectory-footer">
+  <p>Speech and language never really disappeared from my work. My honors thesis returns to those questions from a sociological perspective.</p>
   <a class="textlink" href="about.html">Read my story →</a>
  </div>
 </section>
@@ -103,4 +96,19 @@
  <div class="recognition-inline"><span>Order of Pegasus · 2026</span><span>Distinguished Undergraduate Researcher · 2026</span><span>Harvard PPIA JSI · 2026</span><span>Johns Hopkins Amgen Scholar · 2025</span><span>McNair Scholar · since 2024</span></div>
 </section>
 <section class="contact-strip"><div><p class="eyebrow">Contact</p><h2>Get in touch</h2></div><div class="contact-links"><a href="mailto:taiel@ucf.edu">taiel@ucf.edu</a><a href="https://github.com/taielucile">GitHub</a><a href="https://www.linkedin.com/in/luciletaiel">LinkedIn</a><a href="cv.html">CV</a></div></section>
-</main><footer><span>© 2026 Taiel Lucile</span><span>Sociology · education · race · disability</span></footer></body></html>
+</main><footer><span>© 2026 Taiel Lucile</span><span>Sociology · education · race · disability</span></footer><script>
+(() => {
+ const steps=[...document.querySelectorAll('.trajectory-steps [data-step]')];
+ const copy=document.querySelector('[data-trajectory-copy]');
+ if(!steps.length||!copy)return;
+ const text={
+  slp:'I entered college planning to become a school-based speech-language pathologist. I wanted to work with Black and Latino children from low-resource communities.',
+  questions:'As I learned more about special education, I became less interested in clinical practice and more interested in the decisions schools make around disability and services: who gets identified, for what, and under which rules.',
+  sociology:'Those questions brought me to sociology. I now use quantitative research to study racial and socioeconomic differences in disability identification, services, and educational institutions.'
+ };
+ steps.forEach(btn=>btn.addEventListener('click',()=>{
+  steps.forEach(b=>b.setAttribute('aria-selected',String(b===btn)));
+  copy.textContent=text[btn.dataset.step];
+ }));
+})();
+</script></body></html>
