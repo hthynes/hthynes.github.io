@@ -1418,3 +1418,33 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 @media(max-width:800px){
  .portrait-orbit{left:-26px;top:-24px;width:calc(100% + 48px);height:calc(100% + 44px)}
 }
+
+/* release46 — restore the original homepage headline typography */
+.hero-copy h1{
+ color:var(--ink)!important;
+ font-family:var(--serif)!important;
+ font-style:normal!important;
+ font-weight:500!important;
+ line-height:.94!important;
+ letter-spacing:-.045em!important;
+ max-width:8.7ch!important;
+}
+.hero-copy h1 em{
+ color:#6f3428!important;
+ font-style:italic!important;
+ font-weight:500!important;
+ text-decoration-line:underline!important;
+ text-decoration-thickness:.045em!important;
+ text-underline-offset:.09em!important;
+ text-decoration-color:#6f3428!important;
+}
+@media(min-width:1280px){
+ .hero-copy h1{font-size:clamp(4.75rem,5.35vw,6.15rem)!important}
+}
+@media(min-width:801px) and (max-width:1279px){
+ .hero-copy h1{font-size:clamp(3.9rem,5.7vw,5.15rem)!important;max-width:8.4ch!important}
+}
+@media(max-width:800px){
+ .hero-copy h1{font-size:clamp(3rem,13vw,4.6rem)!important;max-width:9.2ch!important}
+ .hero-copy h1 em{color:#6f3428!important}
+}
