@@ -1336,3 +1336,22 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .hero-copy h1 em span{color:var(--accent-dark)}
  .hero-work-link{font-family:var(--serif);font-weight:500}
 }
+
+/* release42 — organic portrait accent + research-interests placement */
+.portrait-mat::after{content:none!important}
+.portrait-orange-shape{position:absolute;z-index:-1;right:-52px;bottom:-28px;width:150px;height:108px;background:var(--accent);opacity:.72;clip-path:polygon(4% 32%,18% 9%,43% 1%,69% 12%,93% 5%,100% 34%,88% 56%,96% 81%,70% 94%,43% 87%,17% 100%,0 76%,9% 55%);transform:rotate(-7deg)}
+@media(min-width:981px){
+ .hero-visual{padding-right:0}
+ .home-portrait{margin-left:10px}
+ .hero-interests{right:-16px;top:auto;bottom:86px;transform:none;width:172px;background:rgba(243,234,220,.94);padding:10px 4px 10px 17px;border-left:2px solid var(--accent);z-index:4}
+ .hero-interests b{display:block;white-space:nowrap}
+ .hero-interests p{margin-top:8px;line-height:1.5}
+}
+@media(min-width:1280px){
+ .hero-interests{right:-10px;bottom:100px;width:178px}
+ .portrait-orange-shape{right:-62px;bottom:-32px;width:166px;height:118px}
+}
+@media(max-width:800px){
+ .portrait-orange-shape{right:-20px;bottom:-17px;width:112px;height:80px}
+ .hero-interests{background:transparent}
+}
