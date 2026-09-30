@@ -1273,7 +1273,7 @@ body.writing-page .writing-head::before,body.writing-page .writing-head::after{d
 .home-page .hero-visual{position:relative;display:grid;grid-template-columns:minmax(0,470px);gap:24px;align-items:start;justify-content:end;padding:18px 24px 0 34px;min-height:0}
 .home-page .home-portrait{width:100%;max-width:470px;margin:0;position:relative;z-index:2}
 .home-page .portrait-mat{position:relative;padding:9px;background:#fff9ed;box-shadow:0 18px 38px rgba(21,59,62,.12)}
-.home-page .portrait-mat::before{content:"";position:absolute;width:45%;height:38%;left:-40px;top:-38px;background:var(--ink);z-index:-1;opacity:.96}
+.home-page .portrait-mat::before{content:"";position:absolute;width:45%;height:38%;left:-40px;top:-38px;background-color:var(--ink);background-image:radial-gradient(rgba(245,237,223,.3) .55px,transparent .8px),radial-gradient(rgba(245,237,223,.16) .45px,transparent .8px);background-size:6px 6px,11px 9px;z-index:-1;opacity:.98}
 .home-page .portrait-mat::after{content:none}
 .home-page .home-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;filter:none}
 .home-page .home-portrait::before,.portrait-orange-shape{display:none!important}
@@ -1281,7 +1281,7 @@ body.writing-page .writing-head::before,body.writing-page .writing-head::after{d
 .home-page .portrait-orbit path{fill:none!important;stroke:var(--accent)!important;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .home-page .home-portrait .portrait-mat,.home-page .home-portrait figcaption{position:relative;z-index:2}
 .home-page .home-portrait figcaption{display:grid;grid-template-columns:1fr 1.7fr;gap:18px;border-top:1px solid var(--ink);padding-top:9px;margin-top:13px;font-size:.61rem;line-height:1.35;text-transform:uppercase;letter-spacing:.08em}
-.home-page .home-portrait figcaption span{font-weight:760}
+.home-page .home-portrait figcaption span{font-weight:650;letter-spacing:.16em;line-height:1.55;text-transform:uppercase}
 .home-page .home-portrait figcaption small{color:var(--ink);font-size:inherit;text-align:right}
 .home-page .hero-interests{position:static;width:auto;align-self:end;margin:0 0 0 24px;border-left:2px solid var(--accent);padding:9px 0 9px 16px;background:transparent;z-index:3}
 .home-page .hero-interests b{display:block;white-space:nowrap;font-size:.62rem;text-transform:uppercase;letter-spacing:.12em}
