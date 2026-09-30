@@ -1135,3 +1135,12 @@ body.notebook-site{background:var(--paper)}
    padding-top:42px!important;
  }
 }
+
+/* release30 — clean brand/pronoun lockup */
+.brand{display:inline-flex!important;align-items:baseline;gap:8px;text-decoration:none;white-space:nowrap}
+.brand>span{font-weight:800;letter-spacing:-.02em}
+.brand>small{display:inline!important;font-size:.58rem!important;font-weight:650!important;letter-spacing:.025em!important;color:var(--muted)!important;line-height:1!important}
+@media(max-width:760px){
+ .brand{gap:7px}
+ .brand>small{font-size:.56rem!important}
+}
