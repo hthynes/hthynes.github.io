@@ -997,3 +997,26 @@ body.notebook-site{background:var(--paper)}
  .classification-sketch>div:not(.sketch-arrow){padding:18px 0}
  .hero-links{align-items:flex-start;flex-direction:column}
 }
+
+
+/* release25b — intellectual voice across inner pages */
+.intellectual-turn{display:grid;grid-template-columns:190px minmax(0,760px);gap:44px;background:var(--surface);box-shadow:0 0 0 100vmax var(--surface);clip-path:inset(0 -100vmax)}
+.intellectual-turn blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.65rem);line-height:1.3;margin:0;color:var(--accent-dark)}
+.method-provocation{display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px 44px}
+.method-provocation h2{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.8rem);font-weight:500;max-width:12ch}
+.method-questions{grid-column:2;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);margin-top:18px}
+.method-questions p{font-family:var(--serif);font-size:1.15rem;padding:17px 20px 17px 0;margin:0;border-bottom:1px solid var(--line)}
+.method-questions p:nth-child(even){border-left:1px solid var(--line);padding-left:20px}
+.research-page .pagehead h1,.methods-page .pagehead h1,.about-page .pagehead h1,.writing-page .pagehead h1,.news-page .pagehead h1{font-family:var(--serif);font-weight:500}
+.research-page .pagehead,.methods-page .pagehead,.about-page .pagehead,.writing-page .pagehead,.news-page .pagehead{position:relative}
+.research-page .boundary{background:#fff9ed;box-shadow:4px 5px 0 var(--surface);border-left:0;border-top:3px solid var(--accent);transform:rotate(-.2deg)}
+.research-page .project>h2{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:500}
+.research-page .project:nth-of-type(even){background:rgba(227,232,215,.42);box-shadow:0 0 0 100vmax rgba(227,232,215,.42);clip-path:inset(0 -100vmax)}
+.writing-page .pub h3,.news-page .news-item h2{font-family:var(--serif);font-weight:500}
+.about-page .about-story>div>p{font-size:1rem;line-height:1.75}
+.about-page .about-story>div>p:first-of-type{font-family:var(--serif);font-size:1.3rem}
+@media(max-width:760px){
+ .intellectual-turn,.method-provocation{grid-template-columns:1fr;gap:10px}
+ .method-questions{grid-column:1;grid-template-columns:1fr}
+ .method-questions p:nth-child(even){border-left:0;padding-left:0}
+}
