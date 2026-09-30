@@ -1137,7 +1137,7 @@ body.notebook-site{background:var(--paper)}
  .brand>small{font-size:.56rem!important}
 }
 
-/* Homepage rhythm is consolidated in release47 below. */
+/* Homepage rhythm is consolidated in the final layout block below. */
 
 /* Make interactive/research objects read as interfaces rather than prose blocks. */
 .research-page .research-architecture{
@@ -1220,7 +1220,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 /* Keep the wider editorial canvas on large screens. */
 @media(min-width:1280px){header,main,footer{--max:1320px}}
 
-/* release47 — one authoritative homepage spacing + hero system */
+/* Homepage — one authoritative spacing and responsive hero system */
 .home-page{
  --home-major-space:78px;
  --home-standard-space:62px;
@@ -1234,7 +1234,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 .home-page .contact-strip{padding-top:var(--home-compact-space)!important;padding-bottom:var(--home-compact-space)!important}
 
 /* Hero: spacing follows the content rather than an artificial min-height. */
-.home-page .editorial-hero-photo{padding-top:42px!important;padding-bottom:64px!important;overflow:visible}
+.home-page .editorial-hero-photo{padding-top:32px!important;padding-bottom:64px!important;overflow:visible}
 .home-page .hero-kicker{padding-bottom:9px;margin-bottom:28px}
 .home-page .hero-composition{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:48px;align-items:center}
 .home-page .hero-copy{min-width:0;align-self:center}
@@ -1304,15 +1304,15 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 /* Tablet */
 @media(min-width:761px) and (max-width:1099px){
  .home-page{--home-major-space:66px;--home-standard-space:56px;--home-compact-space:46px}
- .home-page .editorial-hero-photo{padding-top:36px!important;padding-bottom:54px!important}
+ .home-page .editorial-hero-photo{padding-top:36px!important;padding-bottom:52px!important}
  .home-page .hero-kicker{margin-bottom:24px}
  .home-page .hero-composition{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px}
  .home-page .hero-copy h1{font-size:clamp(3.45rem,6vw,4.6rem);max-width:8.4ch}
  .home-page .hero-statement{font-size:1.12rem;line-height:1.42;margin-top:28px}
  .home-page .hero-links{margin-top:24px}
- .home-page .hero-visual{grid-template-columns:minmax(0,360px) 118px;gap:14px;padding:14px 0 18px 18px}
+ .home-page .hero-visual{grid-template-columns:minmax(0,360px);gap:24px;padding:14px 0 0 18px}
  .home-page .home-portrait{max-width:360px}
- .home-page .hero-interests{margin-bottom:34px;padding-left:12px;background:transparent}
+ .home-page .hero-interests{margin:0 0 0 24px;padding-left:14px;background:transparent}
  .home-page .hero-interests b{white-space:normal;font-size:.58rem}
  .home-page .hero-interests p{font-size:.7rem;line-height:1.48}
  .home-page .portrait-orbit{left:-34px;top:-28px;width:calc(100% + 64px);height:calc(100% + 54px)}
@@ -1322,7 +1322,7 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
 
 /* Mobile */
 @media(max-width:760px){
- header,main,footer{width:min(calc(100% - 48px),var(--max))}
+ body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:min(calc(100% - 48px),var(--max))}
  .home-page{--home-major-space:52px;--home-standard-space:46px;--home-compact-space:40px}
  .home-page .editorial-hero-photo{padding-top:30px!important;padding-bottom:44px!important}
  .home-page .hero-kicker{margin-bottom:22px}
@@ -1347,13 +1347,4 @@ body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column
  .home-page .workbench{grid-template-columns:1fr}
  .home-page .workbench>a{min-height:220px}
  .home-page .trajectory-intro{margin-bottom:20px}
-}
-
-/* Small phones */
-@media(max-width:430px){
- header,main,footer{width:min(calc(100% - 40px),var(--max))}
- .home-page .editorial-hero-photo{padding-top:26px!important;padding-bottom:40px!important}
- .home-page .hero-composition{gap:32px}
- .home-page .hero-statement{font-size:1.03rem}
- .home-page .home-portrait{width:92%}
 }
