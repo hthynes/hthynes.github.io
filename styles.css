@@ -1020,3 +1020,38 @@ body.notebook-site{background:var(--paper)}
  .method-questions{grid-column:1;grid-template-columns:1fr}
  .method-questions p:nth-child(even){border-left:0;padding-left:0}
 }
+
+/* release27 — compact interactive trajectory */
+.trajectory-story{display:block!important;padding-top:58px!important;padding-bottom:60px!important}
+.trajectory-intro{display:grid;grid-template-columns:190px minmax(0,760px);gap:44px;align-items:start;margin-bottom:28px}
+.trajectory-intro .eyebrow{margin-top:7px}
+.trajectory-intro h2{font-family:var(--serif);font-size:clamp(2.15rem,4vw,3.7rem);font-weight:500;line-height:1.02;letter-spacing:-.04em;max-width:18ch;margin:0}
+.trajectory-steps{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.trajectory-steps button{appearance:none;border:0;border-right:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;text-align:left;padding:17px 18px;cursor:pointer;min-height:88px}
+.trajectory-steps button:last-child{border-right:0}
+.trajectory-steps button:hover,.trajectory-steps button[aria-selected="true"]{background:#fff9ed}
+.trajectory-steps button[aria-selected="true"]{box-shadow:inset 0 -4px 0 var(--accent)}
+.trajectory-steps span,.trajectory-steps b{display:block}
+.trajectory-steps span{font-size:.62rem;font-weight:850;color:var(--accent-dark);margin-bottom:6px}
+.trajectory-steps b{font-family:var(--serif);font-size:1.08rem;line-height:1.15;font-weight:500}
+.trajectory-panel{min-height:96px;padding:20px 0;border-bottom:1px solid var(--ink)}
+.trajectory-panel p{font-size:.96rem;line-height:1.65;max-width:72ch;margin:0}
+.trajectory-footer{display:grid;grid-template-columns:minmax(0,680px) auto;gap:36px;align-items:start;padding-top:18px}
+.trajectory-footer p{font-size:.82rem;line-height:1.55;color:var(--muted);margin:0}
+.trajectory-footer .textlink{white-space:nowrap}
+@media(max-width:800px){
+ .trajectory-story{padding-top:34px!important;padding-bottom:38px!important}
+ .trajectory-intro{display:block;margin-bottom:20px}
+ .trajectory-intro .eyebrow{margin:0 0 7px}
+ .trajectory-intro h2{font-size:clamp(1.8rem,8vw,2.35rem);line-height:1.05;max-width:15ch}
+ .trajectory-steps{grid-template-columns:1fr}
+ .trajectory-steps button{display:grid;grid-template-columns:28px 1fr;align-items:center;gap:7px;min-height:0;padding:11px 4px;border-right:0;border-bottom:1px solid var(--line)}
+ .trajectory-steps button:last-child{border-bottom:0}
+ .trajectory-steps button[aria-selected="true"]{box-shadow:inset 4px 0 0 var(--accent);padding-left:12px}
+ .trajectory-steps span{margin:0;font-size:.58rem}
+ .trajectory-steps b{font-family:inherit;font-size:.84rem;font-weight:760}
+ .trajectory-panel{min-height:0;padding:15px 0}
+ .trajectory-panel p{font-size:.9rem;line-height:1.55}
+ .trajectory-footer{grid-template-columns:1fr;gap:12px;padding-top:14px}
+ .trajectory-footer p{font-size:.78rem}
+}
