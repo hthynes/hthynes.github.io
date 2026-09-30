@@ -1326,9 +1326,9 @@ body.writing-page .writing-head::before,body.writing-page .writing-head::after{d
  .home-page .hero-copy h1{font-size:clamp(2.65rem,5.2vw,3.55rem);max-width:none}
  .home-page .hero-statement{font-size:1.12rem;line-height:1.42;margin-top:var(--space-head-copy)}
  .home-page .hero-links{margin-top:var(--space-copy-link)}
- .home-page .hero-visual{grid-template-columns:minmax(0,360px);gap:24px;padding:14px 0 0 18px}
+ .home-page .hero-visual{grid-template-columns:minmax(0,360px);gap:22px;padding:14px 0 0 18px}
  .home-page .home-portrait{max-width:360px}
- .home-page .hero-interests{margin:0 0 0 24px;padding-left:14px;background:transparent}
+ .home-page .hero-interests{margin:0 5%;padding:10px 0 9px 14px;max-width:330px;background:transparent}
  .home-page .hero-interests b{white-space:normal;font-size:.58rem}
  .home-page .hero-interests p{font-size:.7rem;line-height:1.48}
  .home-page .portrait-orbit{left:-44px;top:-40px;width:calc(100% + 82px);height:calc(100% + 82px)}
