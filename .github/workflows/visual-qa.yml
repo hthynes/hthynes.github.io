@@ -1,0 +1,56 @@
+name: Visual QA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'styles.css'
+      - 'assets/**'
+      - 'tests/visual/**'
+      - 'playwright.config.js'
+      - 'package.json'
+      - '.github/workflows/visual-qa.yml'
+  pull_request:
+    paths:
+      - '*.html'
+      - 'styles.css'
+      - 'assets/**'
+      - 'tests/visual/**'
+      - 'playwright.config.js'
+      - 'package.json'
+      - '.github/workflows/visual-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Wait for published site
+        if: github.event_name == 'push'
+        run: sleep 45
+      - name: Capture visual baselines / compare
+        env:
+          VISUAL_BASE_URL: https://taielucile.github.io
+        run: npx playwright test --update-snapshots
+      - name: Upload full-page screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-qa-screenshots-${{ github.run_number }}
+          path: |
+            tests/visual/site.spec.js-snapshots/*.png
+            playwright-report/
+          if-no-files-found: warn
+          retention-days: 14
