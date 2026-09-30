@@ -808,3 +808,64 @@ main>section,.project{padding:64px 0;border-bottom:1px solid var(--line)}h1,h2,h
  .story-outcomes{align-items:flex-start}
  .story-outcomes span{width:100%}
 }
+
+
+/* release23: site-wide visual narrative */
+.writing-head,.news-head{position:relative;overflow:hidden}
+.writing-head::after,.news-head::after{content:"";position:absolute;right:2%;top:24%;width:190px;height:190px;border:1px solid var(--accent);border-radius:50%;opacity:.55;pointer-events:none}
+.writing-route{display:grid;grid-template-columns:repeat(4,1fr);max-width:820px;margin-top:34px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.writing-route span{position:relative;padding:15px 16px 16px 0}
+.writing-route span+span{border-left:1px solid var(--line);padding-left:16px}
+.writing-route span:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:14px;background:var(--paper);padding:0 3px;color:var(--accent-text);font-weight:850}
+.writing-route b,.writing-route small{display:block}
+.writing-route b{font-size:.82rem}.writing-route small{font-size:.7rem;color:var(--muted);margin-top:3px}
+.writing-page .published-section{background:var(--surface-cool);box-shadow:0 0 0 100vmax var(--surface-cool);clip-path:inset(0 -100vmax)}
+.writing-page .writing-section h2{font-size:clamp(2.15rem,3.8vw,3.6rem)}
+.writing-page .pub{transition:padding-left .18s ease}
+.writing-page .pub:hover{padding-left:12px}
+
+.milestone-years{display:flex;align-items:center;max-width:640px;margin-top:34px;font-size:.72rem;font-weight:800;color:var(--muted)}
+.milestone-years i{height:1px;flex:1;background:var(--line);margin:0 14px}
+.milestone-years strong{color:var(--accent-dark)}
+.news-list{position:relative}
+.news-list::before{content:"";position:absolute;left:153px;top:0;bottom:0;width:1px;background:var(--line)}
+.news-item{position:relative}
+.news-item::before{content:"";position:absolute;left:148px;top:29px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:3px solid var(--accent);z-index:2}
+.news-item h2{max-width:25ch}
+
+.journey-strip{padding:50px 0 54px}
+.journey-strip>div{display:grid;grid-template-columns:210px minmax(0,1fr);gap:42px;align-items:start;margin-bottom:25px}
+.journey-strip .eyebrow{margin-top:6px}
+.journey-strip ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.journey-strip li{position:relative;min-height:126px;padding:18px 18px 18px 0}
+.journey-strip li+li{border-left:1px solid var(--line);padding-left:18px}
+.journey-strip li:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:17px;background:var(--paper);padding:0 3px;color:var(--accent-text);font-weight:850}
+.journey-strip span,.journey-strip b,.journey-strip small{display:block}
+.journey-strip span{font-size:.63rem;color:var(--accent-text);font-weight:850;margin-bottom:20px}
+.journey-strip b{font-size:.95rem;margin-bottom:4px}
+.journey-strip small{font-size:.72rem;color:var(--muted);line-height:1.4}
+.about-story{background:linear-gradient(90deg,transparent 0,transparent 68%,rgba(230,232,217,.55) 68%,rgba(230,232,217,.55) 100%)}
+
+.cv-page .cv-section{position:relative}
+.cv-page .cv-section>h2{position:sticky;top:12px;background:var(--paper);z-index:2;padding:8px 0}
+.cv-page .cv-row,.cv-page .cv-entry{transition:background .15s ease}
+.cv-page .cv-row:hover,.cv-page .cv-entry:hover{background:rgba(230,232,217,.45)}
+
+@media(max-width:900px){
+ .news-list::before,.news-item::before{display:none}
+ .journey-strip>div{grid-template-columns:1fr;gap:5px}
+ .journey-strip ol{grid-template-columns:1fr 1fr}
+ .journey-strip li:nth-child(3){border-left:0;padding-left:0}
+ .journey-strip li::after{display:none}
+ .about-story{background:none}
+}
+@media(max-width:600px){
+ .writing-head::after,.news-head::after{width:110px;height:110px;right:-42px;top:16%}
+ .writing-route{grid-template-columns:1fr 1fr}
+ .writing-route span::after{display:none}
+ .writing-route span:nth-child(3){border-left:0;padding-left:0}
+ .journey-strip{padding:40px 0 44px}
+ .journey-strip ol{grid-template-columns:1fr}
+ .journey-strip li,.journey-strip li+li,.journey-strip li:nth-child(3){min-height:0;padding:13px 0;border-left:0;border-bottom:1px solid var(--line)}
+ .journey-strip span{margin-bottom:4px}
+}
