@@ -1144,3 +1144,42 @@ body.notebook-site{background:var(--paper)}
  .brand{gap:7px}
  .brand>small{font-size:.56rem!important}
 }
+
+/* release31 — end-to-end desktop rhythm and hierarchy */
+@media(min-width:801px){
+ .home-page>section:not(.editorial-hero){padding-top:62px!important;padding-bottom:64px!important}
+ .home-page .section-intro{grid-template-columns:150px minmax(0,1fr);gap:34px;margin-bottom:28px}
+ .home-page .section-intro h2{font-size:clamp(2rem,3.2vw,3.15rem);line-height:1.04;max-width:20ch}
+ .thinking-copy h2{font-size:clamp(2.35rem,3.7vw,3.6rem)}
+ .questions-section .section-intro h2{font-family:inherit;font-size:1rem;font-weight:700;letter-spacing:0;max-width:none;color:rgba(245,237,223,.72);padding-top:3px}
+ .question-notes{gap:0 64px}
+ .question-notes article{padding:20px 0 22px}
+ .question-notes p{font-size:1.13rem;line-height:1.43;max-width:37ch}
+ .workbench{grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+ .workbench>a{min-height:255px;padding:23px}
+ .workbench h3{font-size:1.45rem;margin:24px 0 10px}
+ .workbench p{font-size:.84rem;line-height:1.5}
+ .workbench span{font-size:.67rem}
+ .trajectory-intro h2{font-size:clamp(2rem,3.1vw,3rem)}
+}
+
+/* Make interactive/research objects read as interfaces rather than prose blocks. */
+.research-page .research-architecture{
+ background:var(--surface-cool);
+ box-shadow:0 0 0 100vmax var(--surface-cool);
+ clip-path:inset(0 -100vmax);
+}
+.research-page .architecture-grid{background:#fff9ed;border:1px solid var(--line)}
+.research-page .architecture-controls{background:var(--paper)}
+.research-page .architecture-stage{padding:28px}
+.research-page .story-river{background:#fff9ed;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.research-page .story-river li{padding-top:18px;padding-bottom:18px}
+.research-page .projectgrid>div:first-child p{max-width:68ch}
+.research-page .project>p:not(.tag):not(.subtitle):not(.boundary){max-width:72ch}
+.research-page .study-at-glance{margin-top:26px;margin-bottom:26px}
+.research-page .reporting-explorer{max-width:980px}
+
+@media(max-width:800px){
+ .questions-section .section-intro h2{font-family:inherit;font-size:.9rem;letter-spacing:0;opacity:.75}
+ .question-notes p{font-size:1.08rem}
+}
