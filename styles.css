@@ -1055,3 +1055,26 @@ body.notebook-site{background:var(--paper)}
  .trajectory-footer{grid-template-columns:1fr;gap:12px;padding-top:14px}
  .trajectory-footer p{font-size:.78rem}
 }
+
+/* release28 — mobile research navigation + compact research lens */
+.research-lens{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:34px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.research-lens p{margin:0;padding:18px 24px 20px 0}
+.research-lens p+p{padding-left:24px;border-left:1px solid var(--line)}
+.research-lens b,.research-lens span{display:block}
+.research-lens b{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-dark);margin-bottom:7px}
+.research-lens span{font-size:.88rem;line-height:1.55;color:var(--ink)}
+.research-page section[id]{scroll-margin-top:76px}
+@media(max-width:760px){
+ .research-page .research-jump{position:sticky;top:0;padding:6px 14px;gap:4px;min-height:44px}
+ .research-page .research-jump a{padding:7px 9px;font-size:.68rem;gap:5px}
+ .research-page .research-jump a span{font-size:.56rem}
+ .research-page .pagehead,.research-page .research-agenda,.research-page .research-story,.research-page .research-architecture,.research-page .project{scroll-margin-top:58px}
+ .research-page section[id],.research-page .anchor-target{scroll-margin-top:64px}
+ .research-agenda{padding-top:38px!important;padding-bottom:42px!important}
+ .research-agenda .agenda-list{margin-bottom:0}
+ .research-lens{grid-template-columns:1fr;margin-top:24px}
+ .research-lens p{padding:14px 0 15px}
+ .research-lens p+p{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+ .research-lens b{font-size:.66rem;margin-bottom:5px}
+ .research-lens span{font-size:.82rem;line-height:1.48}
+}
