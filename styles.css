@@ -961,11 +961,6 @@ body.notebook-site{background:var(--paper)}
 .workbench h3{font-family:var(--serif);font-size:1.65rem;margin:35px 0 12px}
 .workbench p{color:var(--muted);font-size:.88rem}
 .workbench span{margin-top:auto;font-size:.72rem;font-weight:800;color:var(--accent-dark)}
-.trajectory-section{display:grid;grid-template-columns:auto 50px auto 50px auto;align-items:center;gap:12px;background:var(--surface);box-shadow:0 0 0 100vmax var(--surface);clip-path:inset(0 -100vmax)}
-.trajectory-word{font-family:var(--serif);font-style:italic;font-size:clamp(2.4rem,5vw,5.4rem);color:var(--accent-dark)}
-.trajectory-arrow{text-align:center;font-size:1.8rem}
-.trajectory-copy{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:40px;border-top:1px solid var(--ink);padding-top:18px;margin-top:20px}
-.trajectory-copy p{max-width:72ch}
 .recognition-inline{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .recognition-inline span{border:1px solid var(--line);padding:6px 9px;font-size:.7rem}
 .notebook-site footer{border-top:1px solid var(--line)}
@@ -983,9 +978,6 @@ body.notebook-site{background:var(--paper)}
  .puzzle-copy .textlink{grid-column:1}
  .workbench{grid-template-columns:1fr}
  .workbench>a{min-height:220px}
- .trajectory-section{grid-template-columns:1fr;gap:3px}
- .trajectory-arrow{transform:rotate(90deg);text-align:left;margin-left:28px}
- .trajectory-copy{grid-column:1;grid-template-columns:1fr}
 }
 @media(max-width:600px){
  .hero-kicker span:last-child{display:none}
@@ -1183,3 +1175,9 @@ body.notebook-site{background:var(--paper)}
  .questions-section .section-intro h2{font-family:inherit;font-size:.9rem;letter-spacing:0;opacity:.75}
  .question-notes p{font-size:1.08rem}
 }
+
+/* release33 — audit consolidation */
+.agenda-heading{display:grid;grid-template-columns:190px minmax(0,680px);gap:44px;align-items:start;margin-bottom:24px}.agenda-heading .eyebrow{margin:3px 0 0}.agenda-context{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}
+@media(min-width:801px){.research-page .project>h2{font-size:clamp(2rem,3.2vw,3.2rem)}.methods-page .method-provocation h2{font-size:clamp(2.15rem,3.5vw,3.35rem)}.news-page .news-item h2{font-size:clamp(1.3rem,2vw,1.8rem)}}
+@media(max-width:760px){.research-page .research-jump{min-height:40px;padding:5px 14px;gap:4px;scroll-padding-inline:14px;scrollbar-width:none}.research-page .research-jump::-webkit-scrollbar{display:none}.research-page .research-jump a{min-height:32px;padding:6px 9px;border-radius:7px;font-size:.64rem;font-weight:720}.research-page .research-jump a span{font-size:.53rem}.research-page .research-jump a.active{box-shadow:inset 0 -2px 0 var(--accent)}.agenda-heading{grid-template-columns:1fr;gap:6px;margin-bottom:18px}.agenda-context{font-size:.8rem;line-height:1.45}}
+body.notebook-site main .hero{min-height:52vh;display:flex;flex-direction:column;justify-content:center}
