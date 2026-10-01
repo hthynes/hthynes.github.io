@@ -3033,3 +3033,106 @@ nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-brig
 @media(max-width:1050px){
  .about-page .journey-lede{max-width:55ch;color:var(--ink-soft);line-height:1.5}
 }
+
+
+/* release93 — information density pass: remove redundant UI and close dead space */
+
+/* Writing categories are already the page sections; no duplicate stage navigator. */
+.writing-page .writing-route{display:none!important}
+@media(min-width:1051px){
+ .writing-page .writing-head{
+   display:block!important;
+   padding-top:48px!important;
+   padding-bottom:36px!important;
+ }
+ .writing-page .writing-head-copy{
+   display:grid!important;
+   grid-template-columns:minmax(0,1fr) minmax(300px,.55fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:72px!important;
+   align-items:end!important;
+ }
+ .writing-page .writing-head-copy .eyebrow{grid-column:1;grid-row:1;margin:0 0 8px!important}
+ .writing-page .writing-head-copy h1{grid-column:1;grid-row:2;margin:0!important}
+ .writing-page .writing-head-copy .lede{
+   grid-column:2!important;
+   grid-row:1 / span 2!important;
+   align-self:end!important;
+   margin:0 0 5px!important;
+   max-width:34ch!important;
+ }
+}
+
+/* Measurement is an argument + reading checklist, not a card matrix. */
+@media(min-width:1051px){
+ .methods-page .method-provocation{
+   display:grid!important;
+   grid-template-columns:minmax(360px,.78fr) minmax(560px,1.22fr)!important;
+   column-gap:clamp(70px,8vw,125px)!important;
+   align-items:center!important;
+   padding-top:42px!important;
+   padding-bottom:42px!important;
+   min-height:0!important;
+ }
+ .methods-page .method-provocation-copy{min-width:0}
+ .methods-page .method-provocation-copy .eyebrow{margin:0 0 12px!important}
+ .methods-page .method-provocation-copy h2{
+   max-width:12ch!important;
+   margin:0!important;
+   font-size:clamp(2.35rem,3vw,3.2rem)!important;
+   line-height:1.02!important;
+ }
+ .methods-page .method-questions{
+   display:grid!important;
+   grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr)!important;
+   gap:30px!important;
+   align-items:start!important;
+   margin:0!important;
+   padding:0!important;
+   border:0!important;
+ }
+ .methods-page .method-questions>p{
+   min-height:0!important;
+   margin:0!important;
+   padding:0!important;
+   border:0!important;
+   font-family:var(--body)!important;
+   font-size:.96rem!important;
+   line-height:1.55!important;
+   color:var(--ink-soft)!important;
+ }
+ .methods-page .method-questions ul{
+   display:grid!important;
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:0 30px!important;
+   list-style:none!important;
+   margin:0!important;
+   padding:0!important;
+   border-top:2px solid var(--teal)!important;
+ }
+ .methods-page .method-questions li{
+   position:relative!important;
+   margin:0!important;
+   padding:11px 0 11px 17px!important;
+   border-bottom:1px solid var(--line)!important;
+   font-size:.88rem!important;
+   line-height:1.35!important;
+ }
+ .methods-page .method-questions li::before{
+   content:""!important;
+   position:absolute!important;
+   left:0!important;
+   top:18px!important;
+   width:6px!important;
+   height:6px!important;
+   border-radius:50%!important;
+   background:var(--rust)!important;
+ }
+}
+@media(max-width:1050px){
+ .methods-page .method-provocation-copy h2{margin-bottom:18px!important}
+ .methods-page .method-questions{border:0!important}
+ .methods-page .method-questions>p{padding:0!important;border:0!important;margin-bottom:16px!important}
+ .methods-page .method-questions ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--teal)}
+ .methods-page .method-questions li{padding:10px 0;border-bottom:1px solid var(--line)}
+}
