@@ -34,7 +34,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+      # No lockfile is committed, so setup-node cannot use npm's dependency cache.
+      # npm install creates the install state needed for this disposable QA runner.
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - name: Wait for published site
