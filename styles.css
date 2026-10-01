@@ -2572,3 +2572,112 @@ nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-brig
  .research-page #who-gets-help>.study-at-glance{margin:24px 0!important}
  .writing-page .writing-route .route-number{display:none!important}
 }
+
+
+/* release88 — current research as a compact editorial argument */
+@media(min-width:1051px){
+ .home-page .puzzle-section{
+   grid-template-columns:minmax(245px,310px) minmax(0,1fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:clamp(52px,6vw,88px)!important;
+   row-gap:26px!important;
+   padding-top:58px!important;
+   padding-bottom:60px!important;
+ }
+ .home-page .puzzle-section .section-intro{
+   position:static!important;
+   grid-column:1!important;
+   grid-row:1 / span 2!important;
+   padding-right:18px!important;
+ }
+ .home-page .puzzle-section .section-intro h2{
+   max-width:9ch!important;
+   font-size:clamp(2.35rem,3.15vw,3.35rem)!important;
+   line-height:.98!important;
+   margin:10px 0 18px!important;
+ }
+ .home-page .project-subline{
+   max-width:27ch;
+   margin:0;
+   font-size:.9rem;
+   line-height:1.55;
+   color:var(--ink-soft);
+ }
+ .home-page .classification-sketch{
+   grid-column:2!important;
+   grid-row:1!important;
+   min-height:0!important;
+   margin:0!important;
+ }
+ .home-page .classification-sketch>div{
+   min-height:142px!important;
+   padding:22px 26px!important;
+ }
+ .home-page .classification-sketch strong{
+   font-size:clamp(1.25rem,1.55vw,1.55rem)!important;
+   line-height:1.02!important;
+ }
+ .home-page .classification-sketch small{margin-bottom:20px!important}
+ .home-page .classification-sketch .sketch-arrow{
+   min-height:142px!important;
+   padding:0 12px!important;
+ }
+ .home-page .puzzle-copy{
+   grid-column:2!important;
+   grid-row:2!important;
+   display:grid!important;
+   grid-template-columns:minmax(300px,.9fr) minmax(340px,1.1fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:clamp(38px,4.5vw,64px)!important;
+   row-gap:14px!important;
+   align-items:start!important;
+   padding:4px 0 0!important;
+ }
+ .home-page .puzzle-copy .puzzle-question{
+   grid-column:1!important;
+   grid-row:1 / span 2!important;
+   max-width:18ch!important;
+   margin:0!important;
+   font-family:var(--display)!important;
+   font-size:clamp(1.75rem,2.35vw,2.45rem)!important;
+   line-height:1.08!important;
+   color:var(--rust)!important;
+ }
+ .home-page .puzzle-copy .puzzle-summary{
+   grid-column:2!important;
+   grid-row:1!important;
+   max-width:43ch!important;
+   margin:1px 0 0!important;
+   font-size:.98rem!important;
+   line-height:1.6!important;
+   color:var(--ink-soft);
+ }
+ .home-page .puzzle-copy>.textlink{
+   grid-column:2!important;
+   grid-row:2!important;
+   margin:0!important;
+ }
+}
+@media(min-width:761px) and (max-width:1050px){
+ .home-page .project-subline{max-width:30ch;color:var(--ink-soft);line-height:1.5}
+ .home-page .puzzle-copy .puzzle-question{
+   font-family:var(--display);
+   font-size:2rem;
+   line-height:1.08;
+   color:var(--rust);
+   max-width:20ch;
+   margin:0 0 18px;
+ }
+ .home-page .puzzle-copy .puzzle-summary{max-width:55ch;color:var(--ink-soft)}
+}
+@media(max-width:760px){
+ .home-page .project-subline{margin:0;color:var(--ink-soft);line-height:1.5}
+ .home-page .puzzle-copy .puzzle-question{
+   font-family:var(--display);
+   font-size:1.8rem;
+   line-height:1.08;
+   color:var(--rust);
+   margin:0 0 16px;
+ }
+ .home-page .puzzle-copy .puzzle-summary{margin:0 0 16px;color:var(--ink-soft)}
+}
