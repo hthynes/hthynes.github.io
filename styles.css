@@ -1505,293 +1505,143 @@ body.writing-page .writing-route>span:not(:last-child)::after{display:none!impor
   }
 }
 
-
-/* release77 — site-wide spacing, padding, and composition audit */
-:root{
-  --content-measure:72ch;
-  --content-measure-narrow:62ch;
-  --section-rule-gap:26px;
-  --card-pad:24px;
-}
-
-/* Consistent vertical rhythm on inner pages */
-body:not(:has(.home-page)):not(.cv-page) main>section{
-  padding-top:var(--space-standard);
-  padding-bottom:var(--space-standard);
-}
-body:not(:has(.home-page)):not(.cv-page) main>.pagehead{
-  padding-top:var(--space-page-top);
-  padding-bottom:var(--space-page-bottom);
-}
-.pagehead .eyebrow{margin-bottom:12px}
-.pagehead h1{margin-top:0;margin-bottom:20px}
-.pagehead .lede{max-width:var(--content-measure);margin-top:0;margin-bottom:0}
-.section-head{margin-bottom:var(--section-rule-gap)}
-.section-head h2{margin-bottom:10px}
-.section-head>p:last-child{max-width:var(--content-measure);margin-bottom:0}
-.next-nav{margin-top:0;padding-top:var(--space-compact);padding-bottom:var(--space-compact)}
-
-/* Research: predictable hierarchy and breathing room */
-.research-page .research-agenda{padding-top:var(--space-standard)!important;padding-bottom:var(--space-standard)!important}
-.research-page .agenda-heading{margin-bottom:30px}
-.research-page .agenda-list{margin-bottom:0}
-.research-page .research-lens{margin-top:38px}
-.research-page .project{padding-top:var(--space-standard);padding-bottom:var(--space-standard)}
-.research-page .project>.tag{margin:0 0 10px}
-.research-page .project>h2{margin-top:0;margin-bottom:10px}
-.research-page .project>.subtitle{margin-top:0;margin-bottom:30px;max-width:var(--content-measure-narrow)}
-.research-page .study-map{margin-top:0}
-.research-page .projectgrid{margin-top:0}
-.research-page .projectgrid>div:first-child{min-width:0}
-.research-page .projectgrid .detail{min-width:0}
-.research-page .projectgrid p{line-height:1.62}
-.research-page .boundary{box-sizing:border-box}
-.research-page .reporting-explorer{margin-top:30px;margin-bottom:30px}
-.research-page .reporting-contrast strong{line-height:1.2}
-.research-page .reporting-contrast small{line-height:1.45}
-
-/* Methods: keep editorial modules aligned to the same rhythm */
-.methods-page .method-provocation,
-.methods-page .method-evidence,
-.methods-page .method-roadmap{padding-top:var(--space-standard);padding-bottom:var(--space-standard)}
-.methods-page .method-provocation h2{margin-top:0}
-.methods-page .method-questions{margin-top:24px}
-.methods-page .method-evidence article{padding-top:30px;padding-bottom:30px}
-.methods-page .workflow-line{margin-top:28px}
-.methods-page .program-methods{margin-top:28px}
-
-/* About: readable prose and deliberate spacing */
-.about-page .about-story{padding-top:var(--space-standard);padding-bottom:var(--space-standard)}
-.about-page .about-story>div>p{max-width:var(--content-measure);margin-top:0;margin-bottom:18px}
-.about-page .about-story>div>p:last-child{margin-bottom:0}
-.about-page .journey-strip{margin-top:30px;margin-bottom:30px}
-.about-page .about-focus{padding:var(--card-pad)}
-.about-page .about-focus p:last-child{margin-bottom:0}
-
-/* Writing: consistent entry spacing without over-boxing */
-.writing-page .writing-section{padding-top:var(--space-standard)!important;padding-bottom:var(--space-standard)!important}
-.writing-page .writing-route{margin-top:30px}
-.writing-page .pub{padding-top:24px;padding-bottom:24px}
-.writing-page .pub h3{margin-top:0;margin-bottom:8px}
-.writing-page .pub p:last-child{margin-bottom:0}
-
-/* News: improve scan rhythm and keep metadata attached to stories */
-.news-page .news-list{padding-top:var(--space-compact);padding-bottom:var(--space-standard)}
-.news-page .news-item{padding-top:28px;padding-bottom:28px}
-.news-page .news-item h2{margin-top:4px;margin-bottom:10px}
-.news-page .news-item p{max-width:var(--content-measure);line-height:1.6}
-
-/* CV screen layout */
-.cv-page main>.pagehead{padding-top:var(--space-page-top);padding-bottom:var(--space-page-bottom)}
-.cv-page .cv-head .lede{max-width:var(--content-measure)}
-.cv-page .cv-section{padding-top:38px;padding-bottom:38px}
-.cv-page .cv-section>h2{margin-bottom:22px}
-.cv-page .cv-row{padding-top:18px;padding-bottom:18px;column-gap:36px}
-.cv-page .cv-row h3{margin-top:0;margin-bottom:5px}
-.cv-page .cv-row p{margin-top:5px;margin-bottom:8px}
-.cv-page .cv-entry>p{margin-bottom:14px}
-
-/* Tablet: retain whitespace without oversized gaps */
-@media(min-width:761px) and (max-width:1099px){
-  :root{--card-pad:20px}
-  body:not(:has(.home-page)):not(.cv-page) main>section{
-    padding-top:var(--space-standard);
-    padding-bottom:var(--space-standard);
-  }
-  .research-page .project>.subtitle{margin-bottom:26px}
-  .research-page .research-lens{margin-top:30px}
-  .methods-page .method-evidence article{padding-top:26px;padding-bottom:26px}
-  .news-page .news-item{padding-top:25px;padding-bottom:25px}
-}
-
-/* Mobile: compact but never cramped */
-@media(max-width:760px){
-  :root{--card-pad:18px;--section-rule-gap:20px}
-  body:not(:has(.home-page)):not(.cv-page) main>section{
-    padding-top:var(--space-standard);
-    padding-bottom:var(--space-standard);
-  }
-  .pagehead h1{margin-bottom:16px}
-  .pagehead .eyebrow{margin-bottom:9px}
-  .research-page .project>.subtitle{margin-bottom:22px}
-  .research-page .research-lens{margin-top:26px}
-  .research-page .projectgrid{gap:26px}
-  .research-page .boundary{padding:17px 18px}
-  .methods-page .method-evidence article{padding-top:24px;padding-bottom:24px}
-  .about-page .about-story>div>p{margin-bottom:16px}
-  .writing-page .pub{padding-top:20px;padding-bottom:20px}
-  .news-page .news-list{padding-top:var(--space-compact)}
-  .news-page .news-item{padding-top:22px;padding-bottom:22px}
-  .cv-page .cv-section{padding-top:30px;padding-bottom:30px}
-  .cv-page .cv-row{padding-top:15px;padding-bottom:15px}
-}
-
-
-/* release78 — final visual-rhythm pass: consistent page gutters and component spacing */
-*,*::before,*::after{box-sizing:border-box}
-header,main,footer{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
-main{min-width:0}
-main>section{min-width:0}
-.pagehead h1,.section-intro h2,.agenda-heading h2,.project h2,.cv-section h2{text-wrap:balance}
-.pagehead .lede,.subtitle,.agenda-context{line-height:1.62}
-main>section + section{position:relative}
-.project .study-map + .study-panel{margin-top:0}
-.project .study-panel + .projectgrid{margin-top:32px}
-.projectgrid + .boundary{margin-top:32px!important}
-.detail,.boundary,.architecture-stage,.reporting-note,.about-focus{padding:var(--card-pad)}
-.workbench>a{padding:var(--card-pad)}
-.notebook-site footer{padding-top:28px;padding-bottom:32px;margin-top:0}
-.next-nav{gap:18px}
-.next-nav>a{padding:18px 0}
-@media(min-width:1101px){
- .research-page .research-lens{grid-template-columns:repeat(3,minmax(0,1fr))}
- .research-page .reporting-contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}
- .research-page .reporting-contrast>div{padding:24px 28px}
- .research-page .reporting-contrast>div:last-child{border-left:0;padding-left:28px}
- .research-page .reporting-arrow{padding:18px 12px}
-}
-@media(min-width:761px) and (max-width:1100px){
- .research-page .reporting-contrast{grid-template-columns:1fr}
- .research-page .reporting-contrast>div{padding:22px 0}
- .research-page .reporting-contrast>div+div{border-left:0;padding-left:0}
- .research-page .reporting-arrow{width:100%;min-height:52px;border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-direction:row;justify-content:center}
-}
-@media(max-width:760px){
- header,main,footer{width:min(calc(100% - 36px),var(--max))}
- body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:min(calc(100% - 36px),var(--max))}
- .home-page .editorial-hero-photo::after{right:-18px!important;width:calc(78% + 18px)!important}
- .home-page .hero-visual{padding-inline:0}
- .home-page .hero-interests{margin-left:0;margin-right:0}
- .next-nav{grid-template-columns:1fr}
- .next-nav>a{padding:16px 0}
- .notebook-site footer{padding-top:24px;padding-bottom:28px}
-}
-@media(max-width:420px){
- header,main,footer{width:calc(100% - 28px)}
- body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:calc(100% - 28px)}
- .home-page .editorial-hero-photo::after{right:-14px!important;width:calc(78% + 14px)!important}
-}
-
-
-/* release79 — alignment architecture
-   One site canvas; narrower measures live inside it rather than redefining page edges. */
+/* release80 — canonical layout system.
+   This replaces the temporary release77–79 patch stack with one authoritative layer. */
 :root{
   --site-max:1180px;
   --site-gutter:32px;
   --site-gutter-mobile:18px;
+  --content-measure:72ch;
+  --content-measure-narrow:62ch;
+  --card-pad:24px;
+  --section-gap:64px;
+  --section-gap-compact:44px;
 }
-header,main,footer,
-body:has(.home-page) header,
-body:has(.home-page) main,
-body:has(.home-page) footer{
+*,*::before,*::after{box-sizing:border-box}
+
+/* One canvas across the entire site. */
+header,main,footer{
   width:min(calc(100% - (var(--site-gutter) * 2)),var(--site-max))!important;
   max-width:none!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
+  margin-inline:auto!important;
 }
+main{min-width:0}
+main>section{width:100%;min-width:0;margin-inline:0}
+main>section,.project{padding:var(--section-gap) 0}
+.pagehead{width:100%;max-width:none!important;padding:64px 0 52px}
+.pagehead .eyebrow{margin:0 0 12px}
+.pagehead h1{margin:0 0 20px;text-wrap:balance}
+.pagehead .lede{max-width:720px;margin:0;line-height:1.62}
+.section-head{margin-bottom:26px}
+.section-head h2{margin-bottom:10px;text-wrap:balance}
+.section-head>p:last-child{max-width:var(--content-measure);margin-bottom:0}
+.next-nav{width:100%;margin-top:0;padding:36px 0;gap:22px}
+footer{width:100%;margin-top:0;padding:28px 0 32px;min-height:0}
 
-/* Every top-level section shares the same physical left/right anchors. */
-main>section,
-.home-page>section,
-.research-page>section,
-.methods-page>section,
-.about-page>section,
-.writing-page>section,
-.news-page>section{
-  width:100%;
-  margin-left:0;
-  margin-right:0;
-}
-
-/* Page headers align to the canvas; text measure is handled by their children. */
-.hero,.pagehead,
-.research-page .pagehead,
-.news-page .pagehead,
-.about-page .pagehead,
-.cv-page main{
-  width:100%;
-  max-width:none;
-}
-.pagehead .lede{max-width:720px}
-.about-page .pagehead>.lede{max-width:760px}
-
-/* Homepage: preserve editorial asymmetry, but use repeatable grid anchors. */
+/* Homepage: intentional asymmetry on the shared canvas. */
 .home-page .editorial-hero-photo{width:100%}
-.home-page .hero-composition{
-  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
-  column-gap:56px;
-}
-.home-page .section-intro{
-  grid-template-columns:140px minmax(0,1fr);
-  column-gap:40px;
-}
-.home-page .thinking-section{
-  grid-template-columns:260px minmax(0,1fr);
-  column-gap:56px;
-}
+.home-page .hero-composition{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:56px}
+.home-page .section-intro{grid-template-columns:140px minmax(0,1fr);column-gap:40px}
+.home-page .thinking-section{grid-template-columns:260px minmax(0,1fr);column-gap:56px}
 .home-page .question-notes{column-gap:56px}
 .home-page .workbench{gap:16px}
+.home-page .hero-visual{min-width:0}
 
-/* Research: components begin and end on shared anchors. */
-.research-page .agenda-heading,
-.research-page .research-lens,
-.research-page .research-architecture,
-.research-page .project,
-.research-page .reporting-explorer{
-  width:100%;
-}
-.research-page .projectgrid{
-  grid-template-columns:minmax(0,1.55fr) minmax(280px,.55fr);
-  column-gap:56px;
-}
-.research-page #sl-limits{width:100%;max-width:none}
-
-/* Methods/about/news: consistent editorial side-column proportion. */
-.methods-page .method-evidence article{
-  grid-template-columns:minmax(0,1fr) 250px;
-  column-gap:56px;
-}
-.aboutgrid.about-story{
-  grid-template-columns:minmax(0,1.65fr) minmax(250px,.55fr);
-  column-gap:56px;
-}
-.news-item{
-  grid-template-columns:140px minmax(0,1fr);
-  column-gap:40px;
+/* Full-bleed teal field: viewport edge is independent of the content canvas. */
+@media(min-width:761px){
+ body:has(.home-page){overflow-x:clip}
+ .home-page .editorial-hero-photo::after{
+   left:52vw!important;right:auto!important;bottom:0!important;
+   width:48vw!important;height:44%!important;
+   mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 13%,rgba(0,0,0,.68) 38%,#000 70%)!important;
+   -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 13%,rgba(0,0,0,.68) 38%,#000 70%)!important;
+ }
 }
 
-/* Footer and continuation navigation align exactly with body content. */
-.next-nav,footer{width:100%}
+/* Research: one predictable component grid. */
+.research-page .research-agenda,.research-page .project{padding:var(--section-gap) 0!important}
+.research-page .agenda-heading{margin-bottom:30px}
+.research-page .research-lens{margin-top:38px}
+.research-page .project>.tag{margin:0 0 10px}
+.research-page .project>h2{margin:0 0 10px;text-wrap:balance}
+.research-page .project>.subtitle{max-width:var(--content-measure-narrow);margin:0 0 30px;line-height:1.62}
+.research-page .study-map{margin:0 0 32px}
+.research-page .study-panel{margin:-16px 0 32px}
+.research-page .projectgrid{grid-template-columns:minmax(0,1.55fr) minmax(280px,.55fr);gap:56px;align-items:start;margin-top:0}
+.research-page .projectgrid>*{min-width:0}
+.research-page .projectgrid p{line-height:1.62}
+.research-page .detail,.research-page .boundary,.research-page .reporting-note{padding:var(--card-pad)}
+.research-page #sl-limits{width:100%;max-width:none;margin-top:30px;line-height:1.58}
+.research-page .reporting-explorer{max-width:none;margin:30px 0}
+.research-page .reporting-contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr);align-items:stretch}
+.research-page .reporting-contrast>div{min-width:0;padding:24px 28px}
+.research-page .reporting-contrast>div:last-child{border-left:0;padding-left:28px}
+.research-page .reporting-arrow{min-width:0;width:auto;padding:18px 12px;gap:8px}
+.research-page .reporting-arrow small{font-size:.7rem;line-height:1.25;white-space:nowrap}
 
-/* Tablet switches complex compositions before they become visually lopsided. */
-@media(min-width:761px) and (max-width:1050px){
-  :root{--site-gutter:28px}
-  .home-page .hero-composition{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:40px}
-  .home-page .section-intro{grid-template-columns:120px minmax(0,1fr);column-gap:28px}
-  .home-page .thinking-section{grid-template-columns:210px minmax(0,1fr);column-gap:38px}
-  .research-page .projectgrid,
-  .aboutgrid.about-story{grid-template-columns:1fr;gap:30px}
-  .methods-page .method-evidence article{grid-template-columns:minmax(0,1fr) 220px;column-gap:36px}
+@media(min-width:1101px){
+ .research-page .research-lens{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+ .research-page .research-lens p{padding:22px 28px 24px;border-left:1px solid var(--line)}
+ .research-page .research-lens p:first-child{border-left:0;padding-left:0}
+ .research-page .research-lens p:last-child{padding-right:0}
 }
 
-/* Mobile: one clean vertical axis. */
+/* Inner pages use the same canvas and repeatable secondary-column proportions. */
+.about-page .pagehead{width:100%;max-width:none;padding:64px 0 52px}
+.about-page .pagehead>.lede{max-width:760px}
+.aboutgrid.about-story{grid-template-columns:minmax(0,1.65fr) minmax(250px,.55fr);gap:56px;align-items:start}
+.about-page .about-story>div>p{max-width:var(--content-measure);margin:0 0 18px}
+.about-page .about-story>div>p:last-child{margin-bottom:0}
+.about-page .about-focus{padding:var(--card-pad)}
+.methods-page .method-provocation,.methods-page .method-evidence,.methods-page .method-roadmap{padding:var(--section-gap) 0}
+.methods-page .method-evidence article{grid-template-columns:minmax(0,1fr) 250px;gap:56px;padding:30px 0}
+.methods-page .workflow-line,.methods-page .program-methods{margin-top:28px}
+.writing-page .writing-section{padding:var(--section-gap) 0!important}
+.writing-page .pub{padding:24px 0}
+.news-page .news-list{padding:var(--section-gap-compact) 0 var(--section-gap)}
+.news-page .news-item{grid-template-columns:140px minmax(0,1fr);gap:40px;padding:28px 0}
+.news-page .news-item p{max-width:var(--content-measure);line-height:1.6}
+.cv-page main{width:min(calc(100% - (var(--site-gutter) * 2)),980px)!important}
+.cv-page main>.pagehead{padding:64px 0 52px}
+.cv-page .cv-section{padding:38px 0}
+.cv-page .cv-section>h2{margin-bottom:22px}
+.cv-page .cv-row{padding:18px 0;column-gap:36px}
+
+/* Tablet: collapse layouts before the side columns become visually unstable. */
+@media(min-width:761px) and (max-width:1100px){
+ :root{--site-gutter:28px;--card-pad:20px}
+ .research-page .research-lens{grid-template-columns:1fr 1fr}
+ .research-page .research-lens p{padding:18px 22px}
+ .research-page .research-lens p:nth-child(3){grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding-left:0}
+ .research-page .projectgrid,.aboutgrid.about-story{grid-template-columns:1fr;gap:30px}
+ .research-page .reporting-contrast{grid-template-columns:1fr}
+ .research-page .reporting-contrast>div{padding:22px 0}
+ .research-page .reporting-contrast>div+div{border-left:0;padding-left:0}
+ .research-page .reporting-arrow{width:100%;min-height:52px;border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-direction:row;justify-content:center}
+ .methods-page .method-evidence article{grid-template-columns:minmax(0,1fr) 220px;gap:36px}
+}
+
+/* Mobile: one clean vertical axis and one gutter. */
 @media(max-width:760px){
-  :root{--site-gutter:var(--site-gutter-mobile)}
-  header,main,footer,
-  body:has(.home-page) header,
-  body:has(.home-page) main,
-  body:has(.home-page) footer{
-    width:calc(100% - (var(--site-gutter) * 2))!important;
-  }
-  .home-page .hero-composition,
-  .home-page .section-intro,
-  .home-page .thinking-section,
-  .research-page .projectgrid,
-  .methods-page .method-evidence article,
-  .aboutgrid.about-story,
-  .news-item{
-    grid-template-columns:1fr;
-    column-gap:0;
-  }
-  .home-page .hero-visual{padding-left:0;padding-right:0}
+ :root{--site-gutter:18px;--card-pad:18px;--section-gap:40px;--section-gap-compact:32px}
+ header,main,footer,.cv-page main{width:calc(100% - (var(--site-gutter) * 2))!important}
+ main>section,.project{padding:var(--section-gap) 0}
+ .pagehead,.about-page .pagehead,.cv-page main>.pagehead{padding:38px 0 36px}
+ .pagehead h1{margin-bottom:16px}
+ .home-page .hero-composition,.home-page .section-intro,.home-page .thinking-section,
+ .research-page .projectgrid,.methods-page .method-evidence article,.aboutgrid.about-story,.news-page .news-item{grid-template-columns:1fr;column-gap:0}
+ .home-page .hero-visual{padding-inline:0}
+ .home-page .editorial-hero-photo::after{right:-18px!important;width:calc(78% + 18px)!important}
+ .research-page .research-agenda,.research-page .project,.methods-page .method-provocation,.methods-page .method-evidence,.methods-page .method-roadmap,.writing-page .writing-section{padding:var(--section-gap) 0!important}
+ .research-page .research-lens{margin-top:26px}
+ .research-page .project>.subtitle{margin-bottom:22px}
+ .research-page .projectgrid{gap:26px}
+ .research-page #sl-limits{margin-top:24px}
+ .methods-page .method-evidence article{gap:15px;padding:24px 0}
+ .writing-page .pub{padding:20px 0}
+ .news-page .news-item{gap:8px;padding:22px 0}
+ .cv-page .cv-section{padding:30px 0}
+ .cv-page .cv-row{padding:15px 0}
+ .next-nav{grid-template-columns:1fr;padding:30px 0;gap:15px}
+ footer{padding:24px 0 28px}
 }
