@@ -3136,3 +3136,150 @@ nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-brig
  .methods-page .method-questions ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--teal)}
  .methods-page .method-questions li{padding:10px 0;border-bottom:1px solid var(--line)}
 }
+
+
+/* release94 — anti-slop editorial pass
+   Fewer interface metaphors, fewer decorative panels, calmer hierarchy. */
+
+/* Shared: remove the generated-dashboard feel. */
+.eyebrow,.tag,.mini-label{
+  letter-spacing:.1em!important;
+}
+main section::before{pointer-events:none}
+.research-page .research-agenda::before,
+.methods-page .method-provocation::before,
+.about-page .about-story::before,
+.writing-page .writing-section::before{display:none!important}
+
+/* HOME — let prose and one real research example carry the page. */
+@media(min-width:1051px){
+ .home-page .thinking-section,
+ .home-page .trajectory-section{
+   padding-top:52px!important;
+   padding-bottom:52px!important;
+ }
+ .home-page .trajectory-steps{
+   border-top:1px solid var(--ink)!important;
+   border-bottom:1px solid var(--line)!important;
+ }
+ .home-page .trajectory-steps button{
+   background:transparent!important;
+   border-top:0!important;
+ }
+ .home-page .trajectory-steps button.active{
+   background:transparent!important;
+   box-shadow:inset 0 -3px 0 var(--rust-bright)!important;
+ }
+}
+
+/* RESEARCH — replace "app/dashboard" styling with document hierarchy. */
+.research-page .research-lens{
+  border-top:1px solid var(--ink)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.research-page .research-lens p{
+  background:transparent!important;
+  border-top:0!important;
+}
+.research-page .detail{
+  background:transparent!important;
+  border-top:1px solid var(--ink)!important;
+  box-shadow:none!important;
+}
+.research-page .boundary{
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+  border-top:2px solid var(--rust-bright)!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+.research-page .reporting-contrast>div:last-child,
+.research-page .reporting-arrow{
+  background:transparent!important;
+}
+
+/* METHODS — no faux infographic. The questions read like editorial notes. */
+.methods-page .method-questions ul{
+  border-top:1px solid var(--ink)!important;
+}
+.methods-page .method-questions li{
+  padding-left:0!important;
+}
+.methods-page .method-questions li::before{display:none!important}
+.methods-page .method-evidence article aside{
+  background:transparent!important;
+  border-left:1px solid var(--teal)!important;
+}
+.methods-page .learning-next article{
+  border-top:1px solid var(--line)!important;
+}
+
+/* ABOUT — remove timeline/dashboard treatment from a personal narrative. */
+.about-page .journey-strip{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:0!important;
+  margin:22px 0 28px!important;
+  padding:13px 0!important;
+  border-top:1px solid var(--ink)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.about-page .journey-strip li{
+  flex:1 1 180px!important;
+  min-height:0!important;
+  padding:0 22px!important;
+  border:0!important;
+  border-right:1px solid var(--line)!important;
+}
+.about-page .journey-strip li:first-child{padding-left:0!important}
+.about-page .journey-strip li:last-child{border-right:0!important}
+.about-page .journey-strip li::before,
+.about-page .journey-strip li::after{display:none!important}
+.about-page .journey-strip li b{margin:0 0 3px!important}
+.about-page .about-focus{
+  background:transparent!important;
+  border:0!important;
+  border-top:1px solid var(--ink)!important;
+  padding:20px 0 0!important;
+}
+
+/* WRITING — bibliographic page, not product cards. */
+.writing-page .pub:hover{background:transparent!important}
+.writing-page .writing-section{
+  padding-top:40px!important;
+  padding-bottom:40px!important;
+}
+.writing-page .writing-section>h2{
+  font-size:clamp(2.35rem,3vw,3.35rem)!important;
+}
+
+/* NEWS — editorial archive, not interactive tiles. */
+.news-page .news-item:hover{background:transparent!important}
+
+/* Wide screens: cap line lengths and stop stretching tiny ideas across giant canvases. */
+@media(min-width:1500px){
+ .research-page .research-agenda,
+ .research-page .project,
+ .methods-page .method-provocation,
+ .methods-page .method-evidence,
+ .methods-page .method-roadmap,
+ .about-page .about-story,
+ .about-page .recognition-section,
+ .writing-page .writing-section,
+ .news-page .news-list{
+   padding-top:46px!important;
+   padding-bottom:46px!important;
+ }
+}
+
+/* Mobile: keep the same editorial logic without ornamental dividers everywhere. */
+@media(max-width:760px){
+ .about-page .journey-strip{display:block!important}
+ .about-page .journey-strip li{
+   padding:10px 0!important;
+   border-right:0!important;
+   border-bottom:1px solid var(--line)!important;
+ }
+ .about-page .journey-strip li:last-child{border-bottom:0!important}
+}
