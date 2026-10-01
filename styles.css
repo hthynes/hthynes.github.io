@@ -2244,3 +2244,138 @@ h2{font-weight:500}
  .news-page .news-head{padding-top:58px!important;padding-bottom:48px!important;min-height:0!important}
  .news-page .milestone-years{margin-top:34px!important}
 }
+
+
+/* release86 — restrained editorial color system */
+:root{
+  --paper:#f3eadc;
+  --paper-deep:#eadcc7;
+  --paper-soft:#f8f1e6;
+  --ink:#123f40;
+  --ink-soft:#52615d;
+  --teal:#2d7371;
+  --teal-soft:#dbe7df;
+  --teal-wash:rgba(45,115,113,.075);
+  --rust:#a13e21;
+  --rust-bright:#d85b2b;
+  --rust-soft:#f0d6c7;
+  --gold:#c9a55d;
+  --gold-soft:#eee1bd;
+  --line:rgba(18,63,64,.18);
+}
+
+/* Global surfaces: warm paper stays dominant; color marks structure. */
+body{background:var(--paper);color:var(--ink)}
+::selection{background:var(--gold-soft);color:var(--ink)}
+a{color:inherit}
+.eyebrow,.tag,.mini-label{color:var(--rust)}
+.textlink{color:var(--rust)}
+.textlink:hover,.textlink:focus-visible{color:var(--ink)}
+header{border-bottom-color:var(--line)}
+nav a.active,nav a[aria-current="page"]{color:var(--rust)}
+nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-bright)}
+
+/* Give major sections a subtle cadence instead of one endless beige sheet. */
+.research-page .research-agenda,
+.methods-page .method-provocation,
+.about-page .about-story,
+.writing-page .writing-section:nth-of-type(even),
+.news-page .news-list{
+  position:relative;
+}
+.research-page .research-agenda::before,
+.methods-page .method-provocation::before,
+.about-page .about-story::before,
+.writing-page .writing-section:nth-of-type(even)::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;bottom:0;
+  left:calc((100vw - 100%)/-2);
+  right:calc((100vw - 100%)/-2);
+  background:var(--teal-wash);
+}
+
+/* Research: color explains hierarchy and comparison. */
+.research-jump span,.research-jump a span{color:var(--rust)}
+.research-page .agenda-list p>span{color:var(--rust)}
+.research-page .research-lens{border-top-color:var(--teal)}
+.research-page .research-lens b{color:var(--ink)}
+.research-page .architecture-controls button.active,
+.research-page .study-map .active,
+.research-page .study-map button[aria-expanded="true"]{
+  background:var(--teal-soft);
+  color:var(--ink);
+}
+.research-page .architecture-controls button.active::before,
+.research-page .study-map .active::before,
+.research-page .study-map button[aria-expanded="true"]::before{background:var(--rust-bright)}
+.research-page .detail{
+  background:linear-gradient(145deg,var(--paper-soft),rgba(219,231,223,.55));
+  border-top:3px solid var(--teal);
+}
+.research-page .boundary{
+  background:linear-gradient(90deg,var(--paper-soft),rgba(240,214,199,.38));
+  border-top:3px solid var(--rust-bright);
+}
+.research-page .reporting-contrast>div:first-child{background:rgba(219,231,223,.48)}
+.research-page .reporting-contrast>div:last-child{background:rgba(238,225,189,.52)}
+.research-page .reporting-arrow{color:var(--rust);background:var(--paper-soft)}
+
+/* Methods: distinguish evidence types without turning the page into colored cards. */
+.methods-page .method-questions{border-top-color:var(--teal)}
+.methods-page .method-questions p::before{color:var(--rust)}
+.methods-page .evidence-streams article:nth-child(1){border-top:3px solid var(--teal)}
+.methods-page .evidence-streams article:nth-child(2){border-top:3px solid var(--gold)}
+.methods-page .evidence-streams article:nth-child(3){border-top:3px solid var(--rust-bright)}
+.methods-page .method-evidence article aside{
+  background:rgba(219,231,223,.42);
+  border-left-color:var(--teal);
+}
+.methods-page .learning-next article:nth-child(1){border-top:2px solid var(--teal)}
+.methods-page .learning-next article:nth-child(2){border-top:2px solid var(--gold)}
+.methods-page .learning-next article:nth-child(3){border-top:2px solid var(--rust-bright)}
+.methods-page .learning-next article:nth-child(4){border-top:2px solid var(--ink)}
+
+/* Homepage: repeat the same palette in meaningful places. */
+.home-page .thinking-section::before,
+.home-page .trajectory-section::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0 calc((100vw - 100%)/-2);
+  background:rgba(219,231,223,.28);
+}
+.home-page .thinking-section,.home-page .trajectory-section{position:relative;isolation:isolate}
+.home-page .classification-sketch{border-top-color:var(--teal)}
+.home-page .classification-sketch .federal-cell{background:rgba(238,225,189,.55)}
+.home-page .classification-sketch .state-cell{background:rgba(219,231,223,.35)}
+.home-page .classification-sketch .merge-arrow{color:var(--rust-bright)}
+.home-page .trajectory-steps button.active{background:var(--paper-soft);box-shadow:inset 0 -4px 0 var(--rust-bright)}
+.home-page .trajectory-panel{border-top-color:var(--teal)}
+
+/* About / Writing / News: small color moments tied to information. */
+.about-page .about-focus{background:rgba(219,231,223,.42);border-top:3px solid var(--teal)}
+.about-page .recognition-section article:nth-child(odd){border-top-color:var(--gold)}
+.about-page .recognition-section article:nth-child(even){border-top-color:var(--teal)}
+.writing-page .pub .tag{color:var(--rust)}
+.writing-page .pub:hover{background:rgba(219,231,223,.22)}
+.news-page .milestone-years strong{color:var(--rust)}
+.news-page .news-item .tag{color:var(--rust)}
+.news-page .news-item:hover{background:linear-gradient(90deg,rgba(219,231,223,.22),transparent 72%)}
+
+/* CV: restrained color so the document still reads professionally. */
+.cv-page .cv-section>h2{color:var(--rust);border-bottom-color:var(--line)}
+.cv-page .cv-row .date{color:var(--teal)}
+.cv-page .cv-row:hover{background:rgba(219,231,223,.18)}
+
+/* Keep washes subtle on small screens. */
+@media(max-width:760px){
+ .research-page .research-agenda::before,
+ .methods-page .method-provocation::before,
+ .about-page .about-story::before,
+ .writing-page .writing-section:nth-of-type(even)::before{
+   left:-18px;right:-18px;
+ }
+ .home-page .thinking-section::before,.home-page .trajectory-section::before{left:-18px;right:-18px}
+}
