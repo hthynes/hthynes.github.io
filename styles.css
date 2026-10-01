@@ -3296,3 +3296,15 @@ main section::before{pointer-events:none}
  font-style:italic;
  color:var(--ink-soft);
 }
+
+
+/* release97 — credibility pass: scholarship over self-branding */
+.home-page .trajectory-steps button span{display:none!important}
+.methods-page .workflow-line{display:none!important}
+@media(min-width:1051px){
+ .methods-page .feature:not(.workflow-feature){
+   display:block!important;
+   max-width:920px!important;
+ }
+ .methods-page .feature:not(.workflow-feature)>div{max-width:72ch!important}
+}
