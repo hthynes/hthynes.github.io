@@ -1397,3 +1397,87 @@ body.writing-page .writing-route>span:not(:last-child)::after{display:none!impor
 @media(max-width:760px){
  .home-page .editorial-hero-photo::after{right:-24px!important;width:calc(78% + 24px)!important}
 }
+
+
+/* 2026-10-01 research page flow + spacing polish */
+@media(min-width:901px){
+  /* Three lenses should read as one intentional row, not a 2+1 orphan grid. */
+  .research-page .research-lens{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;
+  }
+  .research-page .research-lens p{
+    padding:22px 28px 24px;
+    border-left:1px solid var(--line);
+  }
+  .research-page .research-lens p:first-child{
+    border-left:0;
+    padding-left:0;
+  }
+  .research-page .research-lens p:last-child{padding-right:0}
+
+  /* Give the project navigator its own breathing room before project content. */
+  .research-page .study-map{margin:30px 0 32px}
+  .research-page .study-panel{margin:-16px 0 32px}
+  .research-page #sl-question{padding-top:2px}
+  .research-page #sl-question h3:first-child{margin-top:0}
+
+  /* Keep the two project columns compact; the limitation note follows the
+     actual content rather than inheriting an oversized visual gap. */
+  .research-page .projectgrid{
+    grid-template-columns:minmax(0,1.6fr) minmax(270px,.58fr);
+    gap:48px;
+    align-items:start;
+  }
+  .research-page .projectgrid .detail{align-self:start}
+  .research-page #sl-limits{
+    max-width:none;
+    width:calc(100% - 2px);
+    margin-top:30px;
+    padding:20px 24px;
+    line-height:1.58;
+  }
+
+  /* Reporting comparison: generous side columns and a compact transition. */
+  .research-page .reporting-explorer{max-width:none}
+  .research-page .reporting-contrast{
+    grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);
+    align-items:stretch;
+  }
+  .research-page .reporting-contrast>div{
+    min-width:0;
+    padding:24px 30px;
+  }
+  .research-page .reporting-contrast>div+div{
+    padding-left:30px;
+  }
+  .research-page .reporting-arrow{
+    min-width:0;
+    width:auto;
+    padding:18px 14px;
+    gap:8px;
+  }
+  .research-page .reporting-arrow small{
+    font-size:.7rem;
+    line-height:1.25;
+    white-space:nowrap;
+  }
+}
+@media(min-width:761px) and (max-width:1100px){
+  .research-page .research-lens{grid-template-columns:1fr 1fr}
+  .research-page .research-lens p{padding:18px 22px}
+  .research-page .research-lens p:nth-child(3){
+    grid-column:1/-1;
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding-left:0;
+  }
+  .research-page .reporting-contrast{grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr)}
+}
+@media(max-width:760px){
+  .research-page .study-map{margin-bottom:24px}
+  .research-page .projectgrid{gap:24px}
+  .research-page #sl-limits{margin-top:24px;line-height:1.55}
+  .research-page .reporting-contrast>div{padding:18px 4px}
+  .research-page .reporting-arrow{padding:12px}
+}
