@@ -1969,3 +1969,130 @@ h2{font-weight:500}
  .home-page .puzzle-copy blockquote{margin:0 0 20px!important;font-size:clamp(1.75rem,8vw,2.35rem);line-height:1.12}
  .home-page .puzzle-copy>p{margin-bottom:18px}
 }
+
+
+/* release84 — screenshot-led spacing corrections */
+
+/* Research page opening: use the right half instead of leaving it vacant. */
+@media(min-width:1051px){
+ .research-page .pagehead{
+   display:grid;
+   grid-template-columns:minmax(0,.9fr) minmax(360px,.72fr);
+   grid-template-rows:auto auto;
+   column-gap:clamp(72px,9vw,150px);
+   align-items:end;
+   padding-top:72px!important;
+   padding-bottom:72px!important;
+ }
+ .research-page .pagehead .eyebrow{
+   grid-column:1;
+   grid-row:1;
+   align-self:end;
+   margin-bottom:18px;
+ }
+ .research-page .pagehead h1{
+   grid-column:1;
+   grid-row:2;
+   max-width:10.5ch!important;
+   margin:0!important;
+   font-size:clamp(4.1rem,5.4vw,5.8rem);
+   line-height:.93;
+ }
+ .research-page .pagehead .lede{
+   grid-column:2;
+   grid-row:1 / span 2;
+   align-self:end;
+   max-width:38ch!important;
+   margin:0 0 4px!important;
+   font-size:1.04rem;
+   line-height:1.7;
+ }
+}
+
+/* HUT: the previous grid made the right detail card determine the row height,
+   which pushed the limits note hundreds of pixels below the actual prose. */
+@media(min-width:901px){
+ .research-page #speech-language .projectgrid{
+   display:grid!important;
+   grid-template-columns:minmax(0,1.55fr) minmax(280px,.55fr)!important;
+   gap:56px!important;
+   align-items:start!important;
+   margin-top:32px!important;
+ }
+ .research-page #speech-language .projectgrid>div:first-child{
+   grid-column:1;
+   align-self:start;
+ }
+ .research-page #speech-language .projectgrid>.detail{
+   grid-column:2;
+   align-self:start!important;
+   margin:0!important;
+ }
+ .research-page #sl-limits{
+   margin-top:28px!important;
+   padding:22px 26px!important;
+   font-size:.98rem!important;
+   line-height:1.62!important;
+ }
+ .research-page #sl-limits b{font-size:1rem}
+}
+
+/* Homepage trajectory: remove the oversized gap created by the old multi-row grid.
+   The title and controls now read as one feature, with the narrative directly attached. */
+@media(min-width:1051px){
+ .home-page .trajectory-section{
+   grid-template-columns:minmax(250px,320px) minmax(0,1fr)!important;
+   grid-template-rows:auto auto auto!important;
+   column-gap:clamp(56px,7vw,100px)!important;
+   row-gap:0!important;
+   padding-top:72px!important;
+   padding-bottom:68px!important;
+ }
+ .home-page .trajectory-intro{
+   grid-column:1!important;
+   grid-row:1 / span 3!important;
+   padding-top:4px;
+ }
+ .home-page .trajectory-intro h2{
+   max-width:11ch;
+   margin:12px 0 0!important;
+ }
+ .home-page .trajectory-steps{
+   grid-column:2!important;
+   grid-row:1!important;
+   margin:0!important;
+ }
+ .home-page .trajectory-panel{
+   grid-column:2!important;
+   grid-row:2!important;
+   margin:0!important;
+   padding:24px 0 26px!important;
+   min-height:0!important;
+ }
+ .home-page .trajectory-panel p{
+   max-width:68ch;
+   margin:0!important;
+   line-height:1.65;
+ }
+ .home-page .trajectory-footer{
+   grid-column:2!important;
+   grid-row:3!important;
+   margin:0!important;
+   padding:24px 0 0!important;
+   display:grid!important;
+   grid-template-columns:minmax(0,1fr) auto!important;
+   gap:36px!important;
+   align-items:start!important;
+ }
+ .home-page .trajectory-footer p{margin:0!important;max-width:64ch}
+ .home-page .trajectory-footer .textlink{margin:0!important;white-space:nowrap}
+}
+
+/* Tablet follows the same compact logic. */
+@media(min-width:761px) and (max-width:1050px){
+ .research-page .pagehead{padding-top:58px!important;padding-bottom:58px!important}
+ .research-page #sl-limits{margin-top:26px!important}
+ .home-page .trajectory-section{row-gap:0!important}
+ .home-page .trajectory-panel{margin:0!important;padding:22px 0 24px!important;min-height:0!important}
+ .home-page .trajectory-footer{margin:0!important;padding-top:22px!important}
+}
