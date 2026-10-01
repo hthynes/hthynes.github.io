@@ -1625,3 +1625,49 @@ body:not(:has(.home-page)):not(.cv-page) main>.pagehead{
   .cv-page .cv-section{padding-top:30px;padding-bottom:30px}
   .cv-page .cv-row{padding-top:15px;padding-bottom:15px}
 }
+
+
+/* release78 — final visual-rhythm pass: consistent page gutters and component spacing */
+*,*::before,*::after{box-sizing:border-box}
+header,main,footer{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
+main{min-width:0}
+main>section{min-width:0}
+.pagehead h1,.section-intro h2,.agenda-heading h2,.project h2,.cv-section h2{text-wrap:balance}
+.pagehead .lede,.subtitle,.agenda-context{line-height:1.62}
+main>section + section{position:relative}
+.project .study-map + .study-panel{margin-top:0}
+.project .study-panel + .projectgrid{margin-top:32px}
+.projectgrid + .boundary{margin-top:32px!important}
+.detail,.boundary,.architecture-stage,.reporting-note,.about-focus{padding:var(--card-pad)}
+.workbench>a{padding:var(--card-pad)}
+.notebook-site footer{padding-top:28px;padding-bottom:32px;margin-top:0}
+.next-nav{gap:18px}
+.next-nav>a{padding:18px 0}
+@media(min-width:1101px){
+ .research-page .research-lens{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .research-page .reporting-contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}
+ .research-page .reporting-contrast>div{padding:24px 28px}
+ .research-page .reporting-contrast>div:last-child{border-left:0;padding-left:28px}
+ .research-page .reporting-arrow{padding:18px 12px}
+}
+@media(min-width:761px) and (max-width:1100px){
+ .research-page .reporting-contrast{grid-template-columns:1fr}
+ .research-page .reporting-contrast>div{padding:22px 0}
+ .research-page .reporting-contrast>div+div{border-left:0;padding-left:0}
+ .research-page .reporting-arrow{width:100%;min-height:52px;border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-direction:row;justify-content:center}
+}
+@media(max-width:760px){
+ header,main,footer{width:min(calc(100% - 36px),var(--max))}
+ body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:min(calc(100% - 36px),var(--max))}
+ .home-page .editorial-hero-photo::after{right:-18px!important;width:calc(78% + 18px)!important}
+ .home-page .hero-visual{padding-inline:0}
+ .home-page .hero-interests{margin-left:0;margin-right:0}
+ .next-nav{grid-template-columns:1fr}
+ .next-nav>a{padding:16px 0}
+ .notebook-site footer{padding-top:24px;padding-bottom:28px}
+}
+@media(max-width:420px){
+ header,main,footer{width:calc(100% - 28px)}
+ body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:calc(100% - 28px)}
+ .home-page .editorial-hero-photo::after{right:-14px!important;width:calc(78% + 14px)!important}
+}
