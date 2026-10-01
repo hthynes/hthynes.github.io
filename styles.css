@@ -3283,3 +3283,16 @@ main section::before{pointer-events:none}
  }
  .about-page .journey-strip li:last-child{border-bottom:0!important}
 }
+
+
+/* release96 — small human details, not another component system */
+.about-page .amgen-note small{
+ display:block;
+ max-width:38ch;
+ margin-top:8px;
+ font-family:var(--body);
+ font-size:.78rem;
+ line-height:1.45;
+ font-style:italic;
+ color:var(--ink-soft);
+}
