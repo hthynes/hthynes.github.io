@@ -1,6 +1,6 @@
 # Taiel Lucile — Research Website
 
-Public research website for Taiel Lucile, a sociology researcher studying how racism, ableism, patriarchy, and socioeconomic inequality shape the educational experiences and life-course trajectories of Black disabled children and youth from low-resource communities.
+Public research website for Taiel Lucile, a sociologist studying race, disability, education, institutions, classification, professional knowledge, inequality, and the life course, with a focus on Black disabled children and youth from low-resource communities.
 
 ## Site structure
 
