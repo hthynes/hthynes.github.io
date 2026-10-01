@@ -2681,3 +2681,34 @@ nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-brig
  }
  .home-page .puzzle-copy .puzzle-summary{margin:0 0 16px;color:var(--ink-soft)}
 }
+
+
+/* release89 — HUT grid follows content, not the tallest sidebar */
+@media(min-width:901px){
+ .research-page #speech-language .projectgrid{
+   display:grid!important;
+   grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:46px!important;
+   row-gap:22px!important;
+   align-items:start!important;
+ }
+ .research-page #speech-language .projectgrid>div:first-child{
+   grid-column:1!important;
+   grid-row:1!important;
+ }
+ .research-page #speech-language .projectgrid>.detail{
+   grid-column:2!important;
+   grid-row:1 / span 2!important;
+ }
+ .research-page #speech-language #sl-limits{
+   grid-column:1!important;
+   grid-row:2!important;
+   margin:0!important;
+   width:auto!important;
+   padding:20px 24px!important;
+ }
+}
+@media(max-width:900px){
+ .research-page #speech-language #sl-limits{margin-top:22px!important}
+}
