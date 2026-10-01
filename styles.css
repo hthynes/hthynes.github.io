@@ -2096,3 +2096,151 @@ h2{font-weight:500}
  .home-page .trajectory-panel{margin:0!important;padding:22px 0 24px!important;min-height:0!important}
  .home-page .trajectory-footer{margin:0!important;padding-top:22px!important}
 }
+
+
+/* release85 — methods + news screenshot corrections */
+
+/* METHODS HERO: stop stacking everything in the left half of a wide canvas. */
+@media(min-width:1051px){
+ .methods-page .pagehead{
+   display:grid!important;
+   grid-template-columns:minmax(0,.92fr) minmax(360px,.68fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:clamp(76px,9vw,150px)!important;
+   align-items:end!important;
+   padding-top:66px!important;
+   padding-bottom:66px!important;
+ }
+ .methods-page .pagehead .eyebrow{grid-column:1;grid-row:1;margin:0 0 18px}
+ .methods-page .pagehead h1{
+   grid-column:1;grid-row:2;
+   max-width:12ch!important;
+   margin:0!important;
+   font-size:clamp(4rem,5.2vw,5.55rem);
+   line-height:.94;
+ }
+ .methods-page .pagehead .lede{
+   grid-column:2;grid-row:1 / span 2;
+   align-self:end;
+   max-width:39ch!important;
+   margin:0 0 4px!important;
+   font-size:1.02rem;
+   line-height:1.7;
+ }
+
+ /* Measurement should be a composed statement, not three isolated islands. */
+ .methods-page .method-provocation{
+   display:grid!important;
+   grid-template-columns:210px minmax(320px,.72fr) minmax(360px,1fr)!important;
+   column-gap:clamp(48px,5vw,78px)!important;
+   align-items:start!important;
+   padding-top:66px!important;
+   padding-bottom:66px!important;
+ }
+ .methods-page .method-provocation>.eyebrow{margin:8px 0 0}
+ .methods-page .method-provocation>h2{
+   margin:0!important;
+   max-width:10ch!important;
+   font-size:clamp(2.7rem,3.7vw,4rem);
+   line-height:1.02;
+ }
+ .methods-page .method-questions{
+   margin:0!important;
+   display:grid!important;
+   grid-template-columns:1fr 1fr!important;
+   gap:0 32px!important;
+   border-top:2px solid var(--ink);
+ }
+ .methods-page .method-questions p{
+   margin:0!important;
+   padding:15px 0!important;
+   border-bottom:1px solid var(--line);
+   line-height:1.4;
+ }
+
+ /* Building toward: use the full canvas, shorten the measure, tighten the matrix. */
+ .methods-page .learning-next{
+   display:grid!important;
+   grid-template-columns:240px minmax(0,1fr)!important;
+   column-gap:clamp(58px,7vw,104px)!important;
+   align-items:start!important;
+   padding-top:68px!important;
+   padding-bottom:70px!important;
+ }
+ .methods-page .learning-next>.eyebrow{
+   grid-column:1;grid-row:1 / span 3;
+   margin:9px 0 0!important;
+ }
+ .methods-page .learning-next>h2{
+   grid-column:2;grid-row:1;
+   margin:0 0 14px!important;
+   font-size:clamp(2.8rem,3.8vw,4rem);
+   line-height:1;
+ }
+ .methods-page .learning-next>.lede{
+   grid-column:2;grid-row:2;
+   max-width:70ch!important;
+   margin:0 0 30px!important;
+   line-height:1.62;
+ }
+ .methods-page .learning-next>.grid{
+   grid-column:2;grid-row:3;
+   gap:0 52px!important;
+ }
+ .methods-page .learning-next article{
+   padding:22px 0 24px!important;
+   min-height:0!important;
+ }
+ .methods-page .learning-next article h3{margin:4px 0 8px!important}
+ .methods-page .learning-next article p:last-child{margin-bottom:0!important}
+}
+
+/* NEWS HERO: remove the meaningless empty circle and compress the empty lower half. */
+.news-page .news-head::before,
+.news-page .news-head::after{content:none!important;display:none!important}
+@media(min-width:1051px){
+ .news-page .news-head{
+   display:grid!important;
+   grid-template-columns:minmax(0,1fr) 360px!important;
+   grid-template-rows:auto auto auto!important;
+   column-gap:80px!important;
+   align-items:start!important;
+   padding-top:72px!important;
+   padding-bottom:58px!important;
+   min-height:0!important;
+ }
+ .news-page .news-head>.eyebrow{grid-column:1;grid-row:1;margin:0 0 18px}
+ .news-page .news-head>h1{
+   grid-column:1;grid-row:2;
+   margin:0 0 20px!important;
+   max-width:none!important;
+   font-size:clamp(4.25rem,5.6vw,6rem);
+   line-height:.94;
+ }
+ .news-page .news-head>.lede{
+   grid-column:1;grid-row:3;
+   margin:0!important;
+   max-width:36ch!important;
+ }
+ .news-page .milestone-years{
+   grid-column:2;grid-row:1 / span 3;
+   align-self:end;
+   margin:0 0 6px!important;
+   padding:0!important;
+   display:grid!important;
+   grid-template-columns:auto 1fr auto 1fr auto!important;
+   gap:14px!important;
+   width:100%!important;
+ }
+ .news-page .milestone-years i{align-self:center}
+ .news-page .news-list{padding-top:0!important}
+}
+
+/* Tablet: retain hierarchy without preserving desktop dead zones. */
+@media(min-width:761px) and (max-width:1050px){
+ .methods-page .pagehead{padding-top:56px!important;padding-bottom:56px!important}
+ .methods-page .method-provocation{padding-top:54px!important;padding-bottom:54px!important}
+ .methods-page .learning-next{padding-top:56px!important;padding-bottom:58px!important}
+ .news-page .news-head{padding-top:58px!important;padding-bottom:48px!important;min-height:0!important}
+ .news-page .milestone-years{margin-top:34px!important}
+}
