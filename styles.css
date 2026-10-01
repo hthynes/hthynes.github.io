@@ -1671,3 +1671,127 @@ main>section + section{position:relative}
  body:has(.home-page) header,.home-page,body:has(.home-page) footer{width:calc(100% - 28px)}
  .home-page .editorial-hero-photo::after{right:-14px!important;width:calc(78% + 14px)!important}
 }
+
+
+/* release79 — alignment architecture
+   One site canvas; narrower measures live inside it rather than redefining page edges. */
+:root{
+  --site-max:1180px;
+  --site-gutter:32px;
+  --site-gutter-mobile:18px;
+}
+header,main,footer,
+body:has(.home-page) header,
+body:has(.home-page) main,
+body:has(.home-page) footer{
+  width:min(calc(100% - (var(--site-gutter) * 2)),var(--site-max))!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+/* Every top-level section shares the same physical left/right anchors. */
+main>section,
+.home-page>section,
+.research-page>section,
+.methods-page>section,
+.about-page>section,
+.writing-page>section,
+.news-page>section{
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+}
+
+/* Page headers align to the canvas; text measure is handled by their children. */
+.hero,.pagehead,
+.research-page .pagehead,
+.news-page .pagehead,
+.about-page .pagehead,
+.cv-page main{
+  width:100%;
+  max-width:none;
+}
+.pagehead .lede{max-width:720px}
+.about-page .pagehead>.lede{max-width:760px}
+
+/* Homepage: preserve editorial asymmetry, but use repeatable grid anchors. */
+.home-page .editorial-hero-photo{width:100%}
+.home-page .hero-composition{
+  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+  column-gap:56px;
+}
+.home-page .section-intro{
+  grid-template-columns:140px minmax(0,1fr);
+  column-gap:40px;
+}
+.home-page .thinking-section{
+  grid-template-columns:260px minmax(0,1fr);
+  column-gap:56px;
+}
+.home-page .question-notes{column-gap:56px}
+.home-page .workbench{gap:16px}
+
+/* Research: components begin and end on shared anchors. */
+.research-page .agenda-heading,
+.research-page .research-lens,
+.research-page .research-architecture,
+.research-page .project,
+.research-page .reporting-explorer{
+  width:100%;
+}
+.research-page .projectgrid{
+  grid-template-columns:minmax(0,1.55fr) minmax(280px,.55fr);
+  column-gap:56px;
+}
+.research-page #sl-limits{width:100%;max-width:none}
+
+/* Methods/about/news: consistent editorial side-column proportion. */
+.methods-page .method-evidence article{
+  grid-template-columns:minmax(0,1fr) 250px;
+  column-gap:56px;
+}
+.aboutgrid.about-story{
+  grid-template-columns:minmax(0,1.65fr) minmax(250px,.55fr);
+  column-gap:56px;
+}
+.news-item{
+  grid-template-columns:140px minmax(0,1fr);
+  column-gap:40px;
+}
+
+/* Footer and continuation navigation align exactly with body content. */
+.next-nav,footer{width:100%}
+
+/* Tablet switches complex compositions before they become visually lopsided. */
+@media(min-width:761px) and (max-width:1050px){
+  :root{--site-gutter:28px}
+  .home-page .hero-composition{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:40px}
+  .home-page .section-intro{grid-template-columns:120px minmax(0,1fr);column-gap:28px}
+  .home-page .thinking-section{grid-template-columns:210px minmax(0,1fr);column-gap:38px}
+  .research-page .projectgrid,
+  .aboutgrid.about-story{grid-template-columns:1fr;gap:30px}
+  .methods-page .method-evidence article{grid-template-columns:minmax(0,1fr) 220px;column-gap:36px}
+}
+
+/* Mobile: one clean vertical axis. */
+@media(max-width:760px){
+  :root{--site-gutter:var(--site-gutter-mobile)}
+  header,main,footer,
+  body:has(.home-page) header,
+  body:has(.home-page) main,
+  body:has(.home-page) footer{
+    width:calc(100% - (var(--site-gutter) * 2))!important;
+  }
+  .home-page .hero-composition,
+  .home-page .section-intro,
+  .home-page .thinking-section,
+  .research-page .projectgrid,
+  .methods-page .method-evidence article,
+  .aboutgrid.about-story,
+  .news-item{
+    grid-template-columns:1fr;
+    column-gap:0;
+  }
+  .home-page .hero-visual{padding-left:0;padding-right:0}
+}
