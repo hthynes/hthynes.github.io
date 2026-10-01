@@ -1881,3 +1881,91 @@ h2{font-weight:500}
  .home-page .classification-sketch{margin-bottom:8px!important}
  .home-page .contact-strip{padding-top:42px!important;padding-bottom:42px!important}
 }
+
+
+/* release83 — current-research feature composition */
+@media(min-width:1051px){
+ .home-page .puzzle-section{
+   display:grid!important;
+   grid-template-columns:minmax(210px,280px) minmax(0,1fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:clamp(58px,6.5vw,96px)!important;
+   row-gap:38px!important;
+   align-items:start!important;
+   padding-top:76px!important;
+   padding-bottom:78px!important;
+ }
+ .home-page .puzzle-section .section-intro{
+   grid-column:1!important;
+   grid-row:1 / span 2!important;
+   position:sticky;
+   top:28px;
+   align-self:start;
+   padding-right:12px;
+ }
+ .home-page .puzzle-section .section-intro h2{
+   max-width:8.5ch!important;
+   margin:10px 0 0!important;
+   font-size:clamp(2.25rem,3vw,3.15rem)!important;
+   line-height:.99!important;
+ }
+ .home-page .classification-sketch{
+   grid-column:2!important;
+   grid-row:1!important;
+   margin:0!important;
+   width:100%!important;
+ }
+ .home-page .puzzle-copy{
+   grid-column:2!important;
+   grid-row:2!important;
+   max-width:none!important;
+   display:grid!important;
+   grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr)!important;
+   grid-template-rows:auto auto!important;
+   column-gap:clamp(44px,5vw,72px)!important;
+   row-gap:20px!important;
+   align-items:start!important;
+   padding-top:4px;
+ }
+ .home-page .puzzle-copy blockquote{
+   grid-column:1!important;
+   grid-row:1 / span 2!important;
+   margin:0!important;
+   max-width:17ch!important;
+   font-size:clamp(2.15rem,3vw,3.15rem)!important;
+   line-height:1.12!important;
+ }
+ .home-page .puzzle-copy>p{
+   grid-column:2!important;
+   grid-row:1!important;
+   margin:2px 0 0!important;
+   max-width:31ch!important;
+   font-size:1rem!important;
+   line-height:1.65!important;
+ }
+ .home-page .puzzle-copy>.textlink{
+   grid-column:2!important;
+   grid-row:2!important;
+   justify-self:start!important;
+   align-self:start!important;
+   margin:0!important;
+ }
+}
+@media(min-width:761px) and (max-width:1050px){
+ .home-page .puzzle-section{
+   display:grid!important;
+   grid-template-columns:180px minmax(0,1fr)!important;
+   gap:32px 44px!important;
+ }
+ .home-page .puzzle-section .section-intro{grid-column:1!important;grid-row:1 / span 2!important}
+ .home-page .classification-sketch{grid-column:2!important;grid-row:1!important;margin:0!important}
+ .home-page .puzzle-copy{grid-column:2!important;grid-row:2!important;max-width:none!important}
+ .home-page .puzzle-copy blockquote{max-width:19ch;margin-bottom:22px!important}
+ .home-page .puzzle-copy>p{max-width:52ch}
+}
+@media(max-width:760px){
+ .home-page .puzzle-section{row-gap:24px!important}
+ .home-page .puzzle-section .section-intro h2{max-width:14ch}
+ .home-page .puzzle-copy blockquote{margin:0 0 20px!important;font-size:clamp(1.75rem,8vw,2.35rem);line-height:1.12}
+ .home-page .puzzle-copy>p{margin-bottom:18px}
+}
