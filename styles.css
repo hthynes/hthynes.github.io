@@ -3060,7 +3060,9 @@ nav a.active::after,nav a[aria-current="page"]::after{background:var(--rust-brig
    grid-row:1 / span 2!important;
    align-self:end!important;
    margin:0 0 5px!important;
-   max-width:34ch!important;
+   max-width:42ch!important;
+   font-size:1.05rem!important;
+   line-height:1.6!important;
  }
 }
 
