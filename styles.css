@@ -3126,3 +3126,8 @@ main section::before{pointer-events:none}
  .about-page main>section.about-story{padding:36px 0 44px!important}
  .about-page .about-story>div>p{line-height:1.65}
 }
+
+
+/* Research: bring the first project closer to the context note above it. */
+.research-page .research-agenda{padding-bottom:28px!important}
+.research-page .research-agenda+.project{padding-top:28px!important}
