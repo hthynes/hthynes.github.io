@@ -3103,7 +3103,7 @@ main section::before{pointer-events:none}
 .about-page .about-headshot img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 24%}
 .about-page .about-headshot::before{content:"";position:absolute;top:-10px;left:-10px;width:48%;height:2px;background:var(--accent-dark)}
 .about-page .about-headshot figcaption{margin:0;padding-top:8px;font-size:.68rem;line-height:1.45;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.about-page>section.about-story{display:grid!important;grid-template-columns:minmax(0,1fr) 260px!important;gap:56px!important;align-items:start!important;max-width:1040px;padding:44px 0 52px!important;background:none!important;box-shadow:none!important}
+.about-page main>section.about-story{display:grid!important;grid-template-columns:minmax(0,1fr) 260px!important;gap:56px!important;align-items:start!important;max-width:1040px;padding:44px 0 52px!important;background:none!important;box-shadow:none!important}
 .about-page .about-story::before,.about-page .about-story::after{content:none!important;display:none!important}
 .about-page .about-story>div{min-width:0}
 .about-page .about-story>div>p{max-width:72ch;margin:0 0 20px;font-size:1rem;font-weight:400;line-height:1.7;font-family:var(--body)}
@@ -3116,13 +3116,13 @@ main section::before{pointer-events:none}
 @media(max-width:1050px){
  .about-page .pagehead.about-pagehead{grid-template-columns:minmax(0,1fr) 220px!important;gap:36px!important}
  .about-page .about-headshot{width:220px}
- .about-page>section.about-story{grid-template-columns:1fr!important;gap:28px!important}
+ .about-page main>section.about-story{grid-template-columns:1fr!important;gap:28px!important}
  .about-page .about-story>.detail{max-width:72ch}
 }
 @media(max-width:760px){
  .about-page .pagehead.about-pagehead{grid-template-columns:1fr!important;gap:28px!important;padding:32px 0 36px!important}
  .about-page .about-headshot{justify-self:start;width:200px;margin-left:10px}
  .about-page .about-head-copy .lede{font-size:1rem}
- .about-page>section.about-story{padding:36px 0 44px!important}
+ .about-page main>section.about-story{padding:36px 0 44px!important}
  .about-page .about-story>div>p{line-height:1.65}
 }
