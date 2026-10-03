@@ -3111,8 +3111,8 @@ main section::before{pointer-events:none}
 @media(max-width:760px){.writing-shortcuts{gap:4px 22px;margin-top:24px;font-size:.85rem}}
 
 /* Current research: a single responsive composition, with prose directly below the diagram. */
-.home-page .puzzle-section{display:grid;grid-template-columns:1fr;gap:24px;padding:var(--space-standard) 0!important;align-items:start}
-.home-page .puzzle-section .section-intro{margin:0;position:static;padding:0}
+.home-page>section.puzzle-section{display:grid;grid-template-columns:1fr;gap:24px;padding:60px 0!important;align-items:start}
+.home-page .puzzle-section .section-intro{display:block!important;max-width:none;margin:0;position:static;padding:0}
 .home-page .puzzle-section .section-intro h2{max-width:20ch;margin:10px 0 16px;font-size:clamp(2rem,3vw,2.8rem);line-height:1.06}
 .home-page .puzzle-section .project-subline{max-width:42ch;margin:0;font-size:1rem;line-height:1.55}
 .home-page .classification-sketch{display:grid;grid-template-columns:1fr 1fr 42px 1.2fr;align-items:stretch;width:100%;margin:0;border-top:2px solid var(--teal);border-bottom:1px solid var(--teal)}
@@ -3134,6 +3134,7 @@ main section::before{pointer-events:none}
  .home-page .puzzle-copy{grid-column:2;grid-row:2}
 }
 @media(max-width:760px){
+ .home-page>section.puzzle-section{padding:48px 0!important}
  .home-page .classification-sketch{grid-template-columns:1fr 1fr}
  .home-page .classification-sketch>div:not(.sketch-arrow){padding:16px}
  .home-page .classification-sketch .sketch-arrow{grid-column:1 / -1;min-height:44px;transform:rotate(90deg)}
