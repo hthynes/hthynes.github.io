@@ -3127,7 +3127,7 @@ main section::before{pointer-events:none}
 .home-page .puzzle-copy .puzzle-summary{max-width:none;margin:0 0 20px;font-size:1rem;line-height:1.65;color:var(--ink-soft)}
 .home-page .puzzle-copy>.textlink{display:inline-block;margin:0}
 @media(min-width:1051px){
- .home-page .puzzle-section{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);column-gap:48px;row-gap:24px}
+ .home-page>section.puzzle-section{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);column-gap:48px;row-gap:24px}
  .home-page .puzzle-section .section-intro{grid-column:1;grid-row:1 / span 2}
  .home-page .puzzle-section .section-intro h2{max-width:15ch}
  .home-page .classification-sketch{grid-column:2;grid-row:1}
